@@ -6,11 +6,11 @@
 
 @font-face {
     font-family: "Lazy Dog";
-    src: url("assets/lazy_dog.ttf");
+    src: url("assets/fonts/lazy_dog.ttf");
 }
 
 html {
-    font-family: "Lazy Dog";
+    font-family: "Lazy Dog", serif;
     font-size: max(2vw, 30px);
 }
 
@@ -40,6 +40,17 @@ li {
 p {
     margin: 0;
     margin-bottom: 0.5rem;
+}
+
+a {
+    display: inline-block;
+    color: rgb(85, 75, 75);
+    text-decoration: none;
+    transition: transform 0.5s ease, color 0.4s ease;
+}
+a:hover, a:focus {
+    color:rgb(30, 30, 40);
+    transform: rotate(3deg) translateY(-0.03rem);
 }
 
 .fa {
