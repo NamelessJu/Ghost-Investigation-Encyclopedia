@@ -197,7 +197,7 @@ img::after {
     min-height: 100%;
     padding-top: 0.8rem;
     padding-bottom: var(--book-padding);
-    --mask-gradient: linear-gradient(0deg, transparent 0%, black calc(var(--book-padding) - 0.1rem), black calc(100% - 0.8rem), transparent 100%);
+    --mask-gradient: linear-gradient(0deg, transparent 0%, black calc(var(--book-padding) - 0.1rem), black calc(100% - 0.8rem));
     -webkit-mask-image: var(--mask-gradient);
     mask-image: var(--mask-gradient);
 }
