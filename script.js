@@ -36,6 +36,10 @@ window.addEventListener("load", () => {
 
         pageNumberLeft.innerText = index * 2 + 1;
         pageNumberRight.innerText = index * 2 + 2;
+
+        let pageBody = pages[index].getElementsByClassName("page-body")[0];
+        if (pageBody != undefined)
+            pageBody.scrollTop = 0;
     }
 
     function getOpenedPageIndex() {
@@ -50,7 +54,7 @@ window.addEventListener("load", () => {
 
         let hash = window.location.hash.substring(1);
 
-        let currentElement = document.querySelector("[reference=" + hash + "]");
+        let currentElement = document.querySelector("[id=" + hash + "]");
         while (currentElement != undefined && currentElement != document.body) {
             let pageIndex = pages.indexOf(currentElement);
             if (pageIndex >= 0) return pageIndex;
