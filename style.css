@@ -54,8 +54,13 @@ h6 {
 ul, ol {
     margin-top: 0;
     margin-bottom: 0.5rem;
+    padding-left: 2rem;
 }
 li {
+    margin-bottom: 0.2rem;
+}
+
+ul p, ol p {
     margin-bottom: 0.2rem;
 }
 
@@ -117,6 +122,9 @@ img::after {
 .nomarkers {
     list-style: none;
     padding-inline: 0;
+}
+.nomarkers .nomarkers {
+    margin-left: 1rem;
 }
 
 .image-wrapper {
