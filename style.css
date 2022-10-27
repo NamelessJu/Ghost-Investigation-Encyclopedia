@@ -115,6 +115,10 @@ img::after {
 }
 
 
+.hidden {
+    display: none;
+}
+
 .nolinebreak {
     white-space: nowrap;
 }
