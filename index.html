@@ -6,12 +6,15 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="A book containing all knowledge about investigating ghosts.">
+        <meta name="description" content="A book containing all knowledge about ghost investigation.">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         
         <link rel="stylesheet" href="assets/fonts/fontawesome/css/fontawesome.min.css">
         <link rel="stylesheet" href="assets/fonts/fontawesome/css/solid.min.css">
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
+
+        <link rel="manifest" href="manifest.json">
     </head>
     <body>
         <div id="book">
@@ -21,12 +24,12 @@
                 <a class="bookmark" href="#contents" title="Contents"><i class="fa fa-list"></i></a>
                 <a class="bookmark" href="#ghost-types" title="Ghost Types"><i class="fa fa-ghost"></i></a>
                 <a class="bookmark" href="#locations" title="Locations"><i class="fa fa-map"></i></a>
-                <a class="bookmark" href="#challenges-events" title="Challenges & Events"><i class="fa fa-medal"></i></a>
+                <a class="bookmark" href="#challenges" title="Challenges & Events"><i class="fa fa-medal"></i></a>
             </div>
 
             <div id="pages-container">
 
-
+                <!-- ABOUT -->
 
                 <article class="page">
                     <header class="page-header">
@@ -53,7 +56,7 @@
                     </div>
                 </article>
 
-                
+                <!-- CONTENTS -->
 
                 <article class="page">
                     <header class="page-header">
@@ -74,9 +77,9 @@
                                 <li>
                                     <p>Tools</p>
                                     <ul class="nomarkers">
-                                        <li>Base Equipment</li>
-                                        <li>Optional Equipment</li>
-                                        <li class="hidden">Upgrades</li>
+                                        <li><a href="#base-equipment">Base Equipment</a></li>
+                                        <li><a href="#optional-equipment">Optional Equipment</a></li>
+                                        <li><a href="#shop">Shop / Storage, Loadouts</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -84,36 +87,19 @@
                         <section class="page-half">
                             <ul class="nomarkers">
                                 <li>
-                                    <p>Investigating</p>
+                                    <p>Investigation</p>
                                     <ul class="nomarkers">
-                                        <li>Shop / Storage / Loadouts</li>
-                                        <li>Truck</li>
-                                        <li>Sanity</li>
+                                        <li><a href="#truck">Truck</a></li>
+                                        <li><a href="#sanity">Sanity</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#locations">Locations</a></li>
                                 <li>
                                     <p>Challenges & Events</p>
                                     <ul class="nomarkers">
-                                        <li>
-                                            <p>Challenges</p>
-                                            <ul class="nomarkers hidden">
-                                                <li>Apocalypse Challenge</li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <p>Events</p>
-                                            <ul class="nomarkers hidden">
-                                                <li>Halloween '22</li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <p>Unofficial Challenges</p>
-                                            <ul class="nomarkers hidden">
-                                                <li>Zero evidence</li>
-                                                <li>No doors</li>
-                                            </ul>
-                                        </li>
+                                        <li><a href="#challenges">Challenges</a></li>
+                                        <li><a href="#events">Events</a></li>
+                                        <li><a href="#unofficial-challenges">Unofficial Challenges</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -121,7 +107,7 @@
                     </div>
                 </article>
 
-
+                <!-- GHOSTS -->
 
                 <article class="page">
                     <header class="page-header">
@@ -138,45 +124,49 @@
                             <p>
                                 Lorem ipsum
                             </p>
+                            <div class="image-wrapper">
+                                <img src="assets/images/placeholder.png">
+                                <span class="image-description">Lorem ipsum</span>
+                            </div>
                         </section>
                     </div>
                 </article>
                 
                 <article class="page">
                     <header class="page-header">
-                        <h1 id="ghost-types">Ghost Types</h1>
+                        <h2 id="ghost-types">Ghost Types</h2>
                     </header>
                     <div class="page-body">
                         <section class="page-half">
                             <ol>
-                                <li>Spirit</li>
-                                <li>Wraith</li>
-                                <li>Phantom</li>
-                                <li>Poltergeist</li>
-                                <li>Banshee</li>
-                                <li>Jinn</li>
-                                <li>Mare</li>
-                                <li>Revenant</li>
-                                <li>Shade</li>
-                                <li>Demon</li>
-                                <li>Yurei</li>
-                                <li>Oni</li>
+                                <li><a href="#spirit">Spirit</a></li>
+                                <li><a href="#wraith">Wraith</a></li>
+                                <li><a href="#phantom">Phantom</a></li>
+                                <li><a href="#poltergeist">Poltergeist</a></li>
+                                <li><a href="#banshee">Banshee</a></li>
+                                <li><a href="#jinn">Jinn</a></li>
+                                <li><a href="#mare">Mare</a></li>
+                                <li><a href="#revenant">Revenant</a></li>
+                                <li><a href="#shade">Shade</a></li>
+                                <li><a href="#demon">Demon</a></li>
+                                <li><a href="#yurei">Yurei</a></li>
+                                <li><a href="#oni">Oni</a></li>
                             </ol>
                         </section>
                         <section class="page-half">
                             <ol start="13">
-                                <li>Yokai</li>
-                                <li>Hantu</li>
-                                <li>Goryo</li>
-                                <li>Myling</li>
-                                <li>Onryo</li>
-                                <li>The Twins</li>
-                                <li>Raiju</li>
-                                <li>Obake</li>
-                                <li>The Mimic</li>
-                                <li>Moroi</li>
-                                <li>Deogen</li>
-                                <li>Thaye</li>
+                                <li><a href="#yokai">Yokai</a></li>
+                                <li><a href="#hantu">Hantu</a></li>
+                                <li><a href="#goryo">Goryo</a></li>
+                                <li><a href="#myling">Myling</a></li>
+                                <li><a href="#onryo">Onryo</a></li>
+                                <li><a href="#twins">The Twins</a></li>
+                                <li><a href="#raiju">Raiju</a></li>
+                                <li><a href="#obake">Obake</a></li>
+                                <li><a href="#mimic">The Mimic</a></li>
+                                <li><a href="#moroi">Moroi</a></li>
+                                <li><a href="#deogen">Deogen</a></li>
+                                <li><a href="#thaye">Thaye</a></li>
                             </ol>
                         </section>
                     </div>
@@ -184,34 +174,163 @@
 
                 <article class="page">
                     <header class="page-header">
-                        <h2>Spirit</h2>
+                        <h3 id="spirit">Spirit</h3>
                     </header>
                     <div class="page-body">
                         <section class="page-half">
                             <p>Spirits are basic ghosts with nearly no special traits or behaviour. They are very powerful, but passive, only attacking when they need to. They defend their place of death to the utmost degree, killing anyone that is caught overstaying their welcome.</p>
                             <p><b>Weakness:</b> Spirits are weakened for twice as long <i>(120 seconds)</i> when burning Smudge Sticks near them.</p>
-                            <h3>Evidence</h3>
+                            <h4>Evidence</h4>
                             <ul class="nomarkers">
-                                <li><i class="fa fa-bolt"></i> EMF 5</li>
+                                <li><i class="fa fa-bolt"></i> EMF Level 5</li>
                                 <li><i class="fa fa-walkie-talkie"></i> Spirit Box Response</li>
                                 <li><i class="fa fa-book"></i> Ghost Writing</li>
                             </ul>
                         </section>
                         <section class="page-half">
-                            <h3>Ability</h3>
+                            <h4>Ability</h4>
                             <p>None</p>
-                            <h3>Evidenceless detection</h3>
+                            <h4>Evidenceless identification</h4>
                             <p>Smudge the ghost and time how long it takes for it to hunt again. If it doesn't begin a hunt before 120 seconds have passed, it's likely a Spirit.</p>
                             <p>This test should be done more than once, since other ghosts could also wait a while before hunting after recovering from being weakened by a Smudge Stick.</p>
                         </section>
                     </div>
                 </article>
 
-
+                <article class="page">
+                    <header class="page-header">
+                        <h3 id="wraith">Wraith</h3>
+                    </header>
+                    <div class="page-body">
+                        <section class="page-half">
+                            <p>Wraiths are one of the most dangerous ghosts you will find. It is also the only known ghost that has the ability of flight and has sometimes been known to travel through walls.</p>
+                            <p><b>Strength:</b> Wraiths almost never touch the ground, meaning it can't be tracked by footsteps.</p>
+                            <p><b>Weakness:</b> Wraiths have a toxic reaction to Salt.</p>
+                            <h4>Evidence</h4>
+                            <ul class="nomarkers">
+                                <li><i class="fa fa-bolt"></i> EMF Level 5</li>
+                                <li><i class="fa fa-walkie-talkie"></i> Spirit Box Response</li>
+                                <li><i class="fa fa-person-running"></i> D.O.T.S Silhouette</li>
+                            </ul>
+                        </section>
+                        <section class="page-half">
+                            <h4>Ability</h4>
+                            <p>Can go through walls (?)</p>
+                            <h4>Evidenceless identification</h4>
+                            <p>Wraiths can easily be identified by their missing footsteps after walking through Salt.</p>
+                            <p>Beware: The Salt will still have a footprint in it!</p>
+                        </section>
+                    </div>
+                </article>
 
                 <article class="page">
                     <header class="page-header">
-                        <h1 id="evidences">Evidence</h1>
+                        <h3 id="phantom">Phantom</h3>
+                    </header>
+                    <div class="page-body">
+                        <section class="page-half">
+                            <p>A Phantom is a ghost that can possess the living, inducing fear into those around it. They are most commonly summoned from Ouija Boards.</p>
+                            <p><b>Strength:</b> Looking at a Phantom will drop your sanity considerably faster.</p>
+                            <p><b>Weakness:</b> Taking a photo of the Phantom will make it temporarily disappear.</p>
+                            <h4>Evidence</h4>
+                            <ul class="nomarkers">
+                                <li><i class="fa fa-walkie-talkie"></i> Spirit Box Response</li>
+                                <li><i class="fa fa-fingerprint"></i> Fingerprints</li>
+                                <li><i class="fa fa-person-running"></i> D.O.T.S Silhouette</li>
+                            </ul>
+                        </section>
+                        <section class="page-half">
+                            <h4>Ability</h4>
+                            <p>?</p>
+                            <h4>Evidenceless identification</h4>
+                            <p>The safest and easiest option for checking for Phantoms is to take a photo of the ghost outside of a hunt. If it turns invisible while still remaining manifested and the photo doesn't show it, you were looking at a Phantom.</p>
+                            <p>Another sign for a Phantom is their shorter visibility during hunts.</p>
+                            <p>Phantoms will manifest as shadows more often than other ghosts.</p>
+                        </section>
+                    </div>
+                </article>
+
+                <article class="page">
+                    <header class="page-header">
+                        <h3 id="poltergeist">Poltergeist</h3>
+                    </header>
+                    <div class="page-body">
+                        <section class="page-half">
+                            <p>One of the most famous ghosts, the Poltergeist. Known to manipulate objects around it to spread fear into it's victims.</p>
+                            <p><b>Strength:</b> Poltergeists can throw multiple objects at once, and with great force.</p>
+                            <p><b>Weakness:</b> With nothing to throw, Poltergeists become powerless.</p>
+                            <h4>Evidence</h4>
+                            <ul class="nomarkers">
+                                <li><i class="fa fa-walkie-talkie"></i> Spirit Box Response</li>
+                                <li><i class="fa fa-fingerprint"></i> Fingerprints</li>
+                                <li><i class="fa fa-book"></i> Ghost Writing</li>
+                            </ul>
+                        </section>
+                        <section class="page-half">
+                            <h4>Ability</h4>
+                            <p>Throwing several objects at once</p>
+                            <h4>Evidenceless identification</h4>
+                            <p>Poltergeists consistently throw an object every 0.5 seconds during hunts, which is makes the easiest yet dangerous Phantom test.</p>
+                            <p>Otherwise, you could make a pile of objects to try to provoke the Poltergeist's multithrow ability.</p>
+                        </section>
+                    </div>
+                </article>
+
+                <article class="page">
+                    <header class="page-header">
+                        <h3 id="banshee">Banshee</h3>
+                    </header>
+                    <div class="page-body">
+                        <section class="page-half">
+                            <p>The singing siren, known for attracting its victims through song. It has been known to single out its prey before making a killing blow.</p>
+                            <p><b>Strength:</b> Banshees will weaken their target before striking.</p>
+                            <p><b>Weakness:</b> Banshees can sometimes be heard screaming with a parabolic microphone.</p>
+                            <h4>Evidence</h4>
+                            <ul class="nomarkers">
+                                <li><i class="fa fa-fingerprint"></i> Fingerprints</li>
+                                <li><i class="fa fa-video"></i> Ghost Orbs</li>
+                                <li><i class="fa fa-person-running"></i> D.O.T.S Silhouette</li>
+                            </ul>
+                        </section>
+                        <section class="page-half">
+                            <h4>Ability</h4>
+                            <p>Teleport to its prey</p>
+                            <h4>Evidenceless identification</h4>
+                            <p>...</p>
+                        </section>
+                    </div>
+                </article>
+
+                <article class="page">
+                    <header class="page-header">
+                        <h3 id="jinn">Jinn</h3>
+                    </header>
+                    <div class="page-body">
+                        <section class="page-half">
+                            <p>A Jinn is a territorial ghost that will attack when threatened. It has also been known to be able to travel at significant speed.</p>
+                            <p><b>Strength:</b> A Jinn will travel at a faster speed if its victim is far away.</p>
+                            <p><b>Weakness:</b> Turning off the location's power source will prevent the Jinn from using its ability.</p>
+                            <h4>Evidence</h4>
+                            <ul class="nomarkers">
+                                <li><i class="fa fa-bolt"></i> EMF Level 5</li>
+                                <li><i class="fa fa-fingerprint"></i> Fingerprints</li>
+                                <li><i class="fa fa-snowflake"></i> Freezing Temperatures</li>
+                            </ul>
+                        </section>
+                        <section class="page-half">
+                            <h4>Ability</h4>
+                            <p>Use the location's electrical power to approach its victim when further away from them.</p>
+                            <h4>Evidenceless identification</h4>
+                            <p>...</p>
+                        </section>
+                    </div>
+                </article>
+
+                <!-- EVIDENCE -->
+
+                <article class="page">
+                    <header class="page-header">
+                        <h1 id="evidence">Evidence</h1>
                     </header>
                     <div class="page-body">
                         <section class="page-half">
@@ -226,13 +345,13 @@
                         <section class="page-half">
                             <h2>Evidence Types</h2>
                             <ul class="nomarkers">
-                                <li><a href="#freezing-temperatures"><i class="fa fa-snowflake"></i> Freezing Temperatures</a></li>
-                                <li><a href="#emf-5"></a><i class="fa fa-bolt"></i> EMF 5</li>
-                                <li><a href="#spirit-box-response"></a><i class="fa fa-walkie-talkie"></i> Spirit Box Response</li>
-                                <li><a href="#fingerprints"></a><i class="fa fa-fingerprint"></i> Fingerprints</li>
-                                <li><a href="#ghost-writing"></a><i class="fa fa-book"></i> Ghost Writing</li>
-                                <li><a href="#ghost-orbs"></a><i class="fa fa-video"></i> Ghost Orbs</li>
-                                <li><a href="#dots-silhouette"></a><i class="fa fa-person-running"></i> D.O.T.S Silhouette</li>
+                                <li><i class="fa fa-snowflake"></i> <a href="#freezing-temperatures">Freezing Temperatures</a></li>
+                                <li><i class="fa fa-bolt"></i> <a href="#emf-5">EMF Level 5</a></li>
+                                <li><i class="fa fa-walkie-talkie"></i> <a href="#spirit-box-response">Spirit Box Response</a></li>
+                                <li><i class="fa fa-fingerprint"></i> <a href="#fingerprints">Fingerprints</a></li>
+                                <li><i class="fa fa-book"></i> <a href="#ghost-writing">Ghost Writing</a></li>
+                                <li><i class="fa fa-video"></i> <a href="#ghost-orbs">Ghost Orbs</a></li>
+                                <li><i class="fa fa-person-running"></i> <a href="#dots-silhouette">D.O.T.S Silhouette</a></li>
                             </ul>
                         </section>
                     </div>
@@ -240,7 +359,7 @@
 
                 <article class="page">
                     <header class="page-header">
-                        <h2 id="freezing-temperatures"><i class="fa fa-snowflake"></i> Freezing Temperatures</h2>
+                        <h3 id="freezing-temperatures"><i class="fa fa-snowflake"></i> Freezing Temperatures</h3>
                     </header>
                     <div class="page-body">
                         <section class="page-half">
@@ -254,7 +373,7 @@
 
                 <article class="page">
                     <header class="page-header">
-                        <h2 id="emf-5"><i class="fa fa-bolt"></i> EMF 5</h2>
+                        <h3 id="emf-5"><i class="fa fa-bolt"></i> EMF Level 5</h3>
                     </header>
                     <div class="page-body">
                         <section class="page-half">
@@ -268,7 +387,7 @@
 
                 <article class="page">
                     <header class="page-header">
-                        <h2 id="spirit-box-response"><i class="fa fa-walkie-talkie"></i> Spirit Box Response</h2>
+                        <h3 id="spirit-box-response"><i class="fa fa-walkie-talkie"></i> Spirit Box Response</h3>
                     </header>
                     <div class="page-body">
                         <section class="page-half">
@@ -282,7 +401,7 @@
 
                 <article class="page">
                     <header class="page-header">
-                        <h2 id="fingerprints"><i class="fa fa-fingerprint"></i> Fingerprints</h2>
+                        <h3 id="fingerprints"><i class="fa fa-fingerprint"></i> Fingerprints</h3>
                     </header>
                     <div class="page-body">
                         <section class="page-half">
@@ -296,7 +415,7 @@
 
                 <article class="page">
                     <header class="page-header">
-                        <h2 id="ghost-writing"><i class="fa fa-book"></i> Ghost Writing</h2>
+                        <h3 id="ghost-writing"><i class="fa fa-book"></i> Ghost Writing</h3>
                     </header>
                     <div class="page-body">
                         <section class="page-half">
@@ -310,7 +429,7 @@
 
                 <article class="page">
                     <header class="page-header">
-                        <h2 id="ghost-orbs"><i class="fa fa-video"></i> Ghost Orbs</h2>
+                        <h3 id="ghost-orbs"><i class="fa fa-video"></i> Ghost Orbs</h3>
                     </header>
                     <div class="page-body">
                         <section class="page-half">
@@ -324,7 +443,7 @@
 
                 <article class="page">
                     <header class="page-header">
-                        <h2 id="dots-silhouette"><i class="fa fa-person-running"></i> D.O.T.S Silhouette</h2>
+                        <h3 id="dots-silhouette"><i class="fa fa-person-running"></i> D.O.T.S Silhouette</h3>
                     </header>
                     <div class="page-body">
                         <section class="page-half">
@@ -336,7 +455,105 @@
                     </div>
                 </article>
 
+                <!-- TOOLS -->
 
+                <article class="page">
+                    <header class="page-header">
+                        <h1>Tools</h1>
+                    </header>
+                    <div class="page-body">
+                        <section class="page-half">
+                            <h2 id="base-equipment">Base Equipment</h2>
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </section>
+                        <section class="page-half">
+                            <h2 id="optional-equipment">Optional Equipment</h2>
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </section>
+                    </div>
+                </article>
+
+                <article class="page">
+                    <header class="page-header">
+                        <h2>Shop / Storage, Loadouts</h2>
+                    </header>
+                    <div class="page-body">
+                        <section class="page-half">
+                            <h3 id="shop">Shop / Storage</h3>
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </section>
+                        <section class="page-half">
+                            <h3 id="loadouts">Loadouts</h3>
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </section>
+                    </div>
+                </article>
+
+                <!-- INVESTIGATION -->
+
+                <article class="page">
+                    <header class="page-header">
+                        <h1>Investigation</h1>
+                    </header>
+                    <div class="page-body">
+                        <section class="page-half">
+                            <h2 id="truck">Truck</h2>
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </section>
+                        <section class="page-half">
+                            <h2 id="sanity">Sanity</h2>
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </section>
+                    </div>
+                </article>
+
+                <!-- LOCATIONS -->
+
+                <article class="page">
+                    <header class="page-header">
+                        <h1 id="locations">Locations</h1>
+                    </header>
+                    <div class="page-body">
+                        <section class="page-half">
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </section>
+                        <section class="page-half">
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </section>
+                    </div>
+                </article>
+
+                <!-- CHALLENGES & EVENTS -->
+
+                <article class="page">
+                    <header class="page-header">
+                        <h1>Challenges & Events</h1>
+                    </header>
+                    <div class="page-body">
+                        <section class="page-half">
+                            <h2 id="challenges">Challenges</h2>
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </section>
+                        <section class="page-half">
+                            <h2 id="events">Events</h2>
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </section>
+                    </div>
+                </article>
+
+                <article class="page">
+                    <header class="page-header">
+                        <h2 id="unofficial-challenges">Unofficial Challenges</h2>
+                    </header>
+                    <div class="page-body">
+                        <section class="page-half">
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </section>
+                        <section class="page-half">
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </section>
+                    </div>
+                </article>
 
             </div>
 

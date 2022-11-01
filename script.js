@@ -10,25 +10,25 @@ window.addEventListener("load", () => {
 
 
     btnPagePrevious.addEventListener("click", () => {
-        openPage(getOpenedPageIndex() - 1);
         window.location.hash = "";
+        openPage(getOpenedPageIndex() - 1);
     });
 
     btnPageNext.addEventListener("click", () => {
-        openPage(getOpenedPageIndex() + 1);
         window.location.hash = "";
+        openPage(getOpenedPageIndex() + 1);
     });
 
 
     window.addEventListener("hashchange", openHashPage)
 
 
-    openPage(0);
+    openPage(0, false);
     openHashPage();
 
 
 
-    function openPage(index) {
+    function openPage(index, replaceHash = true) {
         if (pages.length <= 0 || index < 0 || index >= pages.length) return;
         
         pages.forEach(element => element.classList.remove("page-opened"));
@@ -40,6 +40,14 @@ window.addEventListener("load", () => {
         let pageBody = pages[index].getElementsByClassName("page-body")[0];
         if (pageBody != undefined)
             pageBody.scrollTop = 0;
+        
+        btnPagePrevious.removeAttribute("disabled");
+        btnPageNext.removeAttribute("disabled");
+        if (index <= 0) btnPagePrevious.setAttribute("disabled", "disabled");
+        else if (index >= pages.length - 1) btnPageNext.setAttribute("disabled", "disabled");
+
+        if (window.location.hash.length <= 1 && replaceHash)
+            window.history.replaceState(null, "", "#" + (index * 2 + 1));
     }
 
     function getOpenedPageIndex() {
@@ -53,6 +61,9 @@ window.addEventListener("load", () => {
         if (window.location.hash.length < 2) return -1;
 
         let hash = window.location.hash.substring(1);
+
+        let hashNumber = Number.parseInt(hash);
+        if (!isNaN(hashNumber)) return Math.floor((hashNumber - 1) / 2);
 
         let currentElement = document.querySelector("[id=" + hash + "]");
         while (currentElement != undefined && currentElement != document.body) {
@@ -68,7 +79,6 @@ window.addEventListener("load", () => {
 
 
     function openHashPage() {
-        // Save current page index to go back to if direct next hash change is = ""
         openPage(getHashPageIndex());
     }
 });
