@@ -17,7 +17,7 @@
 
 html {
     font-family: "Lazy Dog", serif;
-    font-size: max(2vw, 28px);
+    font-size: max(1.8vw, 28px);
 }
 
 body {
@@ -140,6 +140,7 @@ img::after {
     position: relative;
     display: inline-block;
     width: fit-content;
+    height: fit-content;
 }
 .image-description {
     position: absolute;
@@ -151,13 +152,21 @@ img::after {
     width: calc(100% - 1rem);
     text-align: center;
 }
-.image-var1 {
-    rotate: 3deg;
-    transform-origin: calc(50% - 0.2rem) calc(50% + 0.5rem);
+.page .image-wrapper.image-left-1 {
+    rotate: -3deg;
+    margin: 0.3rem;
 }
-.image-var2 {
+.page .image-wrapper.image-left-2 {
     rotate: -5deg;
-    transform-origin: calc(50% + 5rem) calc(50% - 2rem);
+    margin: 0.45rem;
+}
+.page .image-wrapper.image-right-1 {
+    rotate: 3deg;
+    margin: 0.3rem;
+}
+.page .image-wrapper.image-right-2 {
+    rotate: 5deg;
+    margin: 0.45rem;
 }
 
 .two-columns {
@@ -195,8 +204,8 @@ img::after {
 }
 
 .bookmark {
-    background: #e62b2b;
-    color: currentColor;
+    background: #dd1e1e;
+    color: #f0f0fa;
     width: 1.7rem;
     padding: 1rem 0 0.5rem 0;
     text-align: center;
@@ -209,7 +218,7 @@ img::after {
     margin-left: 0.75rem;
 }
 .bookmark:hover, .bookmark:focus {
-    color: inherit;
+    color: #f0f0fa;
     transform: translate(0, 0);
 }
 
