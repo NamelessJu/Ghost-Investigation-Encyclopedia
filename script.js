@@ -81,4 +81,10 @@ window.addEventListener("load", () => {
     function openHashPage() {
         openPage(getHashPageIndex());
     }
+
+    
+    if (window.location.protocol.startsWith("http") && "serviceWorker" in navigator) {
+        navigator.serviceWorker.register("pwa_caching.js");
+    }
+
 });
