@@ -1,4 +1,4 @@
-const cacheName = "gie_cache_v2";
+const cacheName = "gie_cache_v3";
 const cachedFiles = [
   "assets/",
   "favicon.ico",

@@ -19,7 +19,7 @@
 
 html {
     font-family: "Lazy Dog", serif;
-    font-size: max(1.8vw, 28px);
+    font-size: min(5vh, max(1.8vw, 28px));
 }
 
 body {
