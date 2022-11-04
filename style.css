@@ -210,11 +210,10 @@ img::after {
 }
 
 .bookmark {
-    background: #dd1e1e !important;
-    background: url("assets/images/bookmark.png") !important;
-    background-size: 100% !important;
-    background-position: bottom center !important;
-    box-shadow: none !important;
+    background: #dd1e1e;
+    background: url("assets/images/bookmark.svg");
+    background-size: 100% auto;
+    background-position: bottom center;
     margin: 0;
     color: #f0f0fa;
     width: 1.7rem;
