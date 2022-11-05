@@ -44,14 +44,25 @@ h2 {
 h3 {
     font-size: 1.2rem;
 }
+h4 {
+    font-size: 1rem;
+}
 
 ul, ol {
     margin-top: 0;
     margin-bottom: 0.5rem;
-    padding-left: 2rem;
+    padding: 0;
 }
+
 li {
     margin-bottom: 0.2rem;
+    list-style: none;
+    background: url("assets/images/bullet.png");
+    background-repeat: no-repeat;
+    background-position: 0rem calc(50% - 0.05rem);
+    background-size: 0.75rem;
+
+    padding-left: 1rem;
 }
 
 ul p, ol p {
@@ -65,16 +76,14 @@ p {
 
 a {
     display: inline-block;
-    /* color: rgb(85, 75, 75); */
-    color: currentColor;
-    text-decoration: 0.05rem solid underline;
-    box-shadow: -0.075rem 0.1rem 0.2rem transparent;
-    transition: transform 0.5s ease, color 0.4s ease, text-decoration-color 0.2s ease;
+    color: rgb(85, 75, 75);
+    text-decoration: none;
+    transition: transform 0.5s ease, color 0.4s ease;
     cursor: pointer;
 }
 a:hover, a:focus {
     position: relative;
-    color: rgb(85, 75, 75);
+    color: inherit;
     text-decoration-color: transparent;
     transform: rotate(3deg) translateY(-0.03rem);
     z-index: 99;
@@ -127,9 +136,9 @@ img::after {
     white-space: nowrap;
 }
 
-.nomarkers {
-    list-style: none;
-    padding-inline: 0;
+.nomarkers > li {
+    background: none;
+    padding-left: 0;
 }
 .nomarkers .nomarkers {
     margin-left: 1rem;
@@ -197,7 +206,8 @@ img::after {
 
 #bookmarks {
     display: flex;
-    padding-bottom: 0.8rem;
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.4rem;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
@@ -236,7 +246,7 @@ img::after {
 
 #pages-container {
     min-height: 0;
-    margin-bottom: 0.1rem;
+    margin-bottom: var(--book-padding);
 }
 
 .page {
@@ -273,18 +283,10 @@ img::after {
     overflow-y: auto;
     min-height: 100%;
     padding-top: 0.8rem;
-    padding-bottom: var(--book-padding);
-    --mask-gradient: linear-gradient(0deg, transparent 0%, black calc(var(--book-padding) - 0.1rem), black calc(100% - 0.8rem), rgba(0, 0, 0, 0.5) 100%);
+    --mask-gradient: linear-gradient(0deg, black calc(100% - 0.8rem), rgba(0, 0, 0, 0.5) 100%);
     -webkit-mask-image: var(--mask-gradient);
     mask-image: var(--mask-gradient);
 }
-.page-body::-webkit-scrollbar { /* Chrome, Safari and Opera */
-  display: none;
-}
-.page-body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-} 
 
 
 #page-navigation {
@@ -347,8 +349,16 @@ img::after {
         margin-top: 0.5rem;
     }
 
-    .page-number {
-        display: none;
+
+    #page-number-left {
+        left: auto;
+        right: 0.2rem;
+        transform: translate(0, -50%);
+    }
+
+    #page-number-right {
+        left: 0.2rem;
+        transform: translate(0, -50%);
     }
 
 }
