@@ -1,5 +1,6 @@
-const cacheName = "gie_cache_v3";
+const cacheName = "gie_cache_v4";
 const cachedFiles = [
+  "manifest.webmanifest",
   "assets/",
   "favicon.ico",
   "index.html",

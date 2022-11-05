@@ -2,20 +2,45 @@
 
 window.addEventListener("load", () => {
 
-    const pages = Array.from(document.getElementsByClassName("page"));
-    const pageNumberLeft = document.getElementById("page-number-left");
-    const pageNumberRight = document.getElementById("page-number-right");
-    const btnPagePrevious = document.getElementById("btn-page-previous");
-    const btnPageNext = document.getElementById("btn-page-next");
+    window.addEventListener("beforeinstallprompt", (e) => {
+        e.preventDefault();
+        
+        const promptEvent = e;
+
+        bookmarkInstall.style.display = "";
+        
+        bookmarkInstall.addEventListener("click", (e) => {
+            promptEvent.prompt();
+        });
+    });
+
+    
+    const bookmarkCopylink = id("bookmark-copylink");
+    const bookmarkInstall = id("bookmark-install");
+
+    const pages = Array.from(classes("page"));
+
+    const pageNumberLeft = id("page-number-left");
+    const pageNumberRight = id("page-number-right");
+    const btnPagePrevious = id("btn-page-previous");
+    const btnPageNext = id("btn-page-next");
+    
+
+    bookmarkInstall.style.display = "none";
+
+
+    bookmarkCopylink.addEventListener("click", () => {
+        navigator.clipboard.writeText(window.location.href);
+    });
 
 
     btnPagePrevious.addEventListener("click", () => {
-        window.location.hash = "";
+        // window.location.hash = "";
         openPage(getOpenedPageIndex() - 1);
     });
 
     btnPageNext.addEventListener("click", () => {
-        window.location.hash = "";
+        // window.location.hash = "";
         openPage(getOpenedPageIndex() + 1);
     });
 
@@ -23,12 +48,18 @@ window.addEventListener("load", () => {
     window.addEventListener("hashchange", openHashPage)
 
 
+
     openPage(0, false);
     openHashPage();
 
+    
+    if (window.location.protocol.startsWith("http") && "serviceWorker" in navigator) {
+        navigator.serviceWorker.register("cache.js");
+    }
 
 
-    function openPage(index, replaceHash = true) {
+
+    function openPage(index, pushState = true) {
         if (pages.length <= 0 || index < 0 || index >= pages.length) return;
         
         pages.forEach(element => element.classList.remove("page-opened"));
@@ -46,8 +77,8 @@ window.addEventListener("load", () => {
         if (index <= 0) btnPagePrevious.setAttribute("disabled", "disabled");
         else if (index >= pages.length - 1) btnPageNext.setAttribute("disabled", "disabled");
 
-        if (window.location.hash.length <= 1 && replaceHash)
-            window.history.replaceState(null, "", "#" + (index * 2 + 1));
+        if (pushState)
+            window.history.pushState(null, "", "#" + getOpenedPageHash());
     }
 
     function getOpenedPageIndex() {
@@ -58,7 +89,7 @@ window.addEventListener("load", () => {
     }
 
     function getHashPageIndex() {
-        if (window.location.hash.length < 2) return -1;
+        if (window.location.hash.length < 2) return 0;
 
         let hash = window.location.hash.substring(1);
 
@@ -77,14 +108,28 @@ window.addEventListener("load", () => {
         return -1;
     }
 
+    function getOpenedPageHash() {
+        let index = getOpenedPageIndex();
+        let page = pages[index];
+        let mainHeadings = page.getElementsByTagName("h1");
+        
+        if (mainHeadings.length > 0 && mainHeadings[0].id.length > 0)
+            return mainHeadings[0].id;
+        else
+            return (index * 2 + 1);
+    }
+
 
     function openHashPage() {
-        openPage(getHashPageIndex());
+        openPage(getHashPageIndex(), false);
     }
 
-    
-    if (window.location.protocol.startsWith("http") && "serviceWorker" in navigator) {
-        navigator.serviceWorker.register("pwa_caching.js");
+
+    function id(id) {
+        return document.getElementById(id);
     }
 
+    function classes(classes) {
+        return document.getElementsByClassName(classes);
+    }
 });
