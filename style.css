@@ -59,8 +59,8 @@ li {
     list-style: none;
     background: url("assets/images/bullet.png");
     background-repeat: no-repeat;
-    background-position: 0rem calc(50% - 0.05rem);
-    background-size: 0.75rem;
+    background-position: 0rem calc(50% - 0.075rem);
+    background-size: 0.65rem;
 
     padding-left: 1rem;
 }
