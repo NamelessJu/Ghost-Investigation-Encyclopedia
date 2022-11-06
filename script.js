@@ -19,6 +19,12 @@ window.addEventListener("load", () => {
     const bookmarkInstall = id("bookmark-install");
 
     const pages = Array.from(classes("page"));
+    pages.forEach((e, i) => {
+        if (["error-page"].includes(e.id))
+            pages.splice(i, 1);
+    });
+    
+    const errorPage = id("error-page");
 
     const pageNumberLeft = id("page-number-left");
     const pageNumberRight = id("page-number-right");
@@ -60,22 +66,32 @@ window.addEventListener("load", () => {
 
 
     function openPage(index, pushState = true) {
-        if (pages.length <= 0 || index < 0 || index >= pages.length) return;
-        
+        if (pages.length <= 0) return;
+
+        if (index >= pages.length) index = -1;
+        let page = index == -1 ? errorPage : pages[index];
+
+        errorPage.classList.remove("page-opened")
         pages.forEach(element => element.classList.remove("page-opened"));
-        pages[index].classList.add("page-opened");
+        page.classList.add("page-opened");
 
-        pageNumberLeft.innerText = index * 2 + 1;
-        pageNumberRight.innerText = index * 2 + 2;
+        if (index == -1) {
+            pageNumberLeft.innerText = "";
+            pageNumberRight.innerText = "";
+        }
+        else {
+            pageNumberLeft.innerText = index * 2 + 1;
+            pageNumberRight.innerText = index * 2 + 2;
+        }
 
-        let pageBody = pages[index].getElementsByClassName("page-body")[0];
+        let pageBody = page.getElementsByClassName("page-body")[0];
         if (pageBody != undefined)
             pageBody.scrollTop = 0;
         
         btnPagePrevious.removeAttribute("disabled");
         btnPageNext.removeAttribute("disabled");
         if (index <= 0) btnPagePrevious.setAttribute("disabled", "disabled");
-        else if (index >= pages.length - 1) btnPageNext.setAttribute("disabled", "disabled");
+        if (index >= pages.length - 1 || index == -1) btnPageNext.setAttribute("disabled", "disabled");
 
         if (pushState)
             window.history.pushState(null, "", "#" + getOpenedPageHash());

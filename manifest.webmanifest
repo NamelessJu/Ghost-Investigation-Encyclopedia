@@ -2,7 +2,7 @@
     "$schema": "https://json.schemastore.org/web-manifest-combined.json",
     "name": "Ghost Investigation Encyclopedia",
     "short_name": "GIE",
-    "description": "A book containing all knowledge about ghost investigation.",
+    "description": "A book containing everything you need to know about ghost investigation.",
     "background_color": "#242626",
     "start_url": ".",
     "display": "standalone",

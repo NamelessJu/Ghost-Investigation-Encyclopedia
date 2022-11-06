@@ -144,6 +144,11 @@ img::after {
     margin-left: 1rem;
 }
 
+.two-columns {
+    column-count: 2;
+    column-gap: 0.5rem;
+}
+
 .image-wrapper {
     position: relative;
     display: inline-block;
@@ -177,7 +182,7 @@ img::after {
     margin: 0.45rem;
 }
 
-.two-columns {
+.image-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 0.5rem;
@@ -288,6 +293,13 @@ img::after {
     mask-image: var(--mask-gradient);
 }
 
+#error-page-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 
 #page-navigation {
     width: 100%;
@@ -324,17 +336,17 @@ img::after {
 
 @media (max-width: 1000px) {
 
-    img {
-        width: 100%;
-    }
-
-
     .image-wrapper {
-        width: 100%;
+        max-width: 100%;
     }
 
-    .two-columns > * {
+    .image-row > * {
         grid-column: span 2;
+    }
+
+
+    .two-columns {
+        columns: 1;
     }
 
 

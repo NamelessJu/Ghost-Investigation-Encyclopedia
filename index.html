@@ -7,12 +7,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="A book containing all knowledge about ghost investigation.">
-        <link rel="shortcut icon" href="favicon.ico?v=1" type="image/x-icon">
+        <link rel="shortcut icon" href="favicon.ico?v=2" type="image/x-icon">
         
         <link rel="stylesheet" href="assets/fonts/fontawesome/css/fontawesome.min.css">
         <link rel="stylesheet" href="assets/fonts/fontawesome/css/solid.min.css">
-        <link rel="stylesheet" href="style.css?v=6">
-        <script src="script.js?v=2"></script>
+        <link rel="stylesheet" href="style.css?v=7">
+        <script src="script.js?v=3"></script>
 
         <link rel="manifest" href="manifest.webmanifest">
     </head>
@@ -36,6 +36,19 @@
 
             <div id="pages-container">
 
+                <article id="error-page" class="page">
+                    <header class="page-header">
+                        <h1>Error</h1>
+                    </header>
+                    <div class="page-body">
+                        <div id="error-page-message">
+                            <h2>Page not found.</h2>
+                            <p>This page has either been deleted or never existed in the first place.</p>
+                            <p><a href="#contents">Contents list</a></p>
+                        </div>
+                    </div>
+                </article>
+
                 <!-- ABOUT -->
 
                 <article class="page">
@@ -45,18 +58,18 @@
                     <div class="page-body">
                         <section class="page-half">
                             <h2>About</h2>
-                            <p>Ghost&nbsp;Investigation&nbsp;Encyclopedia is an encyclopedia containing all knowledge about investigating paranormal entities.</p>
-                            <p>It expands and improves on the "Ghost Huntin' - A Survivors Guide" journal commonly used by investigators.</p>
+                            <p>Ghost&nbsp;Investigation&nbsp;Encyclopedia is a book containing everything you need to know about investigating ghosts.</p>
+                            <p>It is an in-depth version of the "Ghost Huntin' - A Survivors Guide" journal commonly used by paranormal investigators.</p>
                         </section>
                         <section class="page-half">
                             <h2>Version</h2>
                             <p>When new updates for Phasmophobia get released, parts of this encyclopedia may become outdated.</p>
-                            <p><i>This encyclopedia is currently up-to-date with game version 0.7.2.0</i></p>
+                            <p><i>This encyclopedia is currently up-to-date with game version <b>0.7.2.0</b></i></p>
 
                             <h2>Credits</h2>
                             <ul class="nomarkers">
                                 <li>Phasmophobia by <span class="nolinebreak"><a href="https://kineticgames.co.uk/" target="_blank">Kinetic&nbsp;Games</a> <i class="fa fa-heart"></i></span></li>
-                                <li>Some information taken from the <span class="nolinebreak"><a href="https://kineticgames.co.uk/" target="_blank">Official&nbsp;Phasmophobia&nbsp;Discord</a> <i class="fa fa-heart"></i></span></li>
+                                <li>Some information taken from the <span class="nolinebreak"><a href="https://discord.com/invite/phasmophobia" target="_blank">Official&nbsp;Phasmophobia&nbsp;Discord</a> <i class="fa fa-heart"></i></span></li>
                                 <li>Lazy&nbsp;Dog font by <a href="https://www.dafont.com/paul-neave.d1372" target="_blank">Paul&nbsp;Neave</a></li>
                                 <li>Icons by <a href="https://fontawesome.com/" target="_blank">Font&nbsp;Awesome</a></li>
                             </ul>
@@ -88,7 +101,7 @@
                                     <ul class="nomarkers">
                                         <li><a href="#equipment">Equipment</a></li>
                                         <li><a href="#store">GH//OS.T Equipment Store</a></li>
-                                        <li><a href="#cursed-possessions">Cursed Possessions</a></li>
+                                        <li><a href="#truck">Truck</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -98,9 +111,10 @@
                                 <li>
                                     <p><b>Investigation</b></p>
                                     <ul class="nomarkers">
-                                        <li><a href="#truck">Truck</a></li>
                                         <li><a href="#sanity">Sanity</a></li>
-                                        <li><a href="#photos">Photography</a></li>
+                                        <li><a href="#photography">Photography</a></li>
+                                        <li><a href="#bones">Bones</a></li>
+                                        <li><a href="#cursed-possessions">Cursed Possessions</a></li>
                                         <li><a href="#locations">Locations</a></li>
                                     </ul>
                                 </li>
@@ -109,7 +123,7 @@
                                     <ul class="nomarkers">
                                         <li><a href="#challenges">Challenges</a></li>
                                         <li><a href="#events">Events</a></li>
-                                        <li><a href="#unofficial-challenges">Unofficial Challenges</a></li>
+                                        <li><a href="#inofficial-challenges">Inofficial Challenges</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -130,7 +144,13 @@
                         </section>
                         <section class="page-half">
                             <h2>Favourite Room</h2>
-                            <p>Lorem ipsum</p>
+                            <p>Ghosts have room that was special to them during their lifetime. They mainly haunt that room, but may still wander to the area around it.</p>
+                            <p>When investigating ghosts it is very important to locate the ghost's favourite room to be able to collect evidence.</p>
+                            <p>
+                                On larger locations one should start by narrowing down the search area by scanning the location with a parabolic microphone.<br>
+                                Once you have a smaller area in which you believe the ghost to be active, walk around in it with an EMF reader and listen for any interactions - as soon as you hear something, search for the object by scanning for an EMF in the direction you heard the sound from.<br>
+                                The ghost's favourite room should be very close to where the interaction happened.
+                            </p>
                         </section>
                     </div>
                 </article>
@@ -151,11 +171,9 @@
                         </section>
                         <section class="page-half">
                             <h2>Survival</h2>
-                            <p>To survive a hunt you must turn off all electrical equipment, since ghosts can sense them and will know where you are!</p>
-                            <p>
-                                After that you can go into a hiding spot, which you should search for and memorize before the ghost starts hunting.<br>
-                                You should try to break the ghost's line of sight to you at least twice before entering your hiding spot, as ghosts check your last known location. They may also search the last hiding spot they have found you at in a previous hunt!
-                            </p>
+                            <p>The first step to be able to survive a ghost's hunt is to search and memorize a hiding spot - <b>before</b> you get hunted!</p>
+                            <p>Ghosts can sense activated electrical equipment around them and will know your location if you are holding one.</p>
+                            <p>You should try to break the ghost's line of sight to you at least twice before entering a hiding spot, as ghosts check your last known location. They may also search the last hiding spot they have found you at in a previous hunt!</p>
                             <p>If you are in a dead end, you can still escape by smudging the ghost, making it lose it's orientation for 6 seconds and wander around aimlessly.</p>
                         </section>
                     </div>
@@ -647,13 +665,13 @@
                         <section class="page-half">
                             <h2>Evidence Types</h2>
                             <ul class="nomarkers">
-                                <li><i class="fa fa-snowflake"></i> <a href="#freezing-temperatures">Freezing Temperatures</a></li>
-                                <li><i class="fa fa-bolt"></i> <a href="#emf-5">EMF Level 5</a></li>
-                                <li><i class="fa fa-walkie-talkie"></i> <a href="#spirit-box-response">Spirit Box Response</a></li>
-                                <li><i class="fa fa-fingerprint"></i> <a href="#fingerprints">Fingerprints</a></li>
-                                <li><i class="fa fa-book"></i> <a href="#ghost-writing">Ghost Writing</a></li>
-                                <li><i class="fa fa-video"></i> <a href="#ghost-orbs">Ghost Orbs</a></li>
-                                <li><i class="fa fa-person-running"></i> <a href="#dots-silhouette">D.O.T.S Silhouette</a></li>
+                                <li><a href="#freezing-temperatures"><i class="fa fa-snowflake"></i> Freezing Temperatures</a></li>
+                                <li><a href="#emf-5"><i class="fa fa-bolt"></i> EMF Level 5</a></li>
+                                <li><a href="#spirit-box-response"><i class="fa fa-walkie-talkie"></i> Spirit Box Response</a></li>
+                                <li><a href="#fingerprints"><i class="fa fa-fingerprint"></i> Fingerprints</a></li>
+                                <li><a href="#ghost-writing"><i class="fa fa-book"></i> Ghost Writing</a></li>
+                                <li><a href="#ghost-orbs"><i class="fa fa-video"></i> Ghost Orbs</a></li>
+                                <li><a href="#dots-silhouette"><i class="fa fa-person-running"></i> D.O.T.S Silhouette</a></li>
                             </ul>
                         </section>
                     </div>
@@ -726,19 +744,20 @@
                     <div class="page-body">
                         <section class="page-half">
                             <p>Specific ghosts leave behind hand- and fingerprints on certain objects after touching them.</p>
-                            <p>These are not visible with the naked eye, but ultraviolet light from UV flashlights or glowsticks will reveal them.</p>
-                            <p>Some object types that ghosts will leave prints on are:</p>
+                            <p>These are not visible on themselves, but ultraviolet light from UV flashlights or glowsticks can reveal them.</p>
+                            <p>Some types of objects that ghosts have been reported to leave prints on are:</p>
                             <ul>
                                 <li>Doors</li>
                                 <li>Light switches</li>
+                                <li>Windows</li>
                                 <li>Cooler boxes</li>
                                 <li>Keyboards</li>
                             </ul>
                         </section>
                         <section class="page-half">
                             <div class="image-wrapper">
-                                <img src="assets/images/placeholder.png">
-                                <span class="image-description">Handprint on a door</span>
+                                <img src="assets/images/evidence/fingerprints/handprint_window.jpg">
+                                <span class="image-description">Handprint on a window</span>
                             </div>
                             <div class="image-wrapper">
                                 <img src="assets/images/placeholder.png">
@@ -763,8 +782,12 @@
                         </section>
                         <section class="page-half">
                             <div class="image-wrapper">
-                                <img src="assets/images/placeholder.png">
-                                <span class="image-description">Book with writing left by a ghost</span>
+                                <img src="assets/images/evidence/ghost_writing/writing.jpg">
+                                <span class="image-description">Book with writing</span>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="assets/images/evidence/ghost_writing/scribbling.jpg">
+                                <span class="image-description">Book with "drawing"</span>
                             </div>
                         </section>
                     </div>
@@ -781,7 +804,7 @@
                                 They appear as small balls of light randomly floating around for a short while before disappearing again.<br>
                                 To be able to spot them you should use a video camera with night vision and extinguish all lights in the room.
                             </p>
-                            <p>There have been reports of ghost orb sightings without the use of night vision, however these are very rare occurances.</p>
+                            <p><i>There have been reports of ghost orb sightings without the use of night vision, however this only seems to be possible in very specific lighting conditions, meaning that these are very rare occurances.</i></p>
                         </section>
                         <section class="page-half">
                             <div class="image-wrapper">
@@ -836,23 +859,25 @@
                         </section>
                         <section class="page-half">
                             <h2>Optional Equipment</h2>
-                            <ul>
-                                <li><a href="#photo-camera">Photo Camera</a></li>
-                                <li><a href="#candle">Candle</a></li>
-                                <li><a href="#crucifix">Crucifix</a></li>
-                                <li><a href="#glowstick">Glowstick</a></li>
-                                <li><a href="#head-mounted-camera">Head Mounted Camera</a></li>
-                                <li><a href="#lighter">Lighter</a></li>
-                                <li><a href="#motion-sensor">Motion Sensor</a></li>
-                                <li><a href="#parabolic-microphone">Parabolic Microphone</a></li>
-                                <li><a href="#salt">Salt</a></li>
-                                <li><a href="#sanity-pills">Sanity Pills</a></li>
-                                <li><a href="#smudge-sticks">Smudge Sticks</a></li>
-                                <li><a href="#sound-sensor">Sound Sensor</a></li>
-                                <li><a href="#strong-flashlight">Strong Flashlight</a></li>
-                                <li><a href="#thermometer">Thermometer</a></li>
-                                <li><a href="#tripod">Tripod</a></li>
-                            </ul>
+                            <div class="two-columns">
+                                <ul>
+                                    <li><a href="#photo-camera">Photo Camera</a></li>
+                                    <li><a href="#candle">Candle</a></li>
+                                    <li><a href="#crucifix">Crucifix</a></li>
+                                    <li><a href="#glowstick">Glowstick</a></li>
+                                    <li><a href="#head-mounted-camera">Head Mounted Camera</a></li>
+                                    <li><a href="#lighter">Lighter</a></li>
+                                    <li><a href="#motion-sensor">Motion Sensor</a></li>
+                                    <li><a href="#parabolic-microphone">Parabolic Microphone</a></li>
+                                    <li><a href="#salt">Salt</a></li>
+                                    <li><a href="#sanity-pills">Sanity Pills</a></li>
+                                    <li><a href="#smudge-sticks">Smudge Sticks</a></li>
+                                    <li><a href="#sound-sensor">Sound Sensor</a></li>
+                                    <li><a href="#strong-flashlight">Strong Flashlight</a></li>
+                                    <li><a href="#thermometer">Thermometer</a></li>
+                                    <li><a href="#tripod">Tripod</a></li>
+                                </ul>
+                            </div>
                         </section>
                     </div>
                 </article>
@@ -873,25 +898,77 @@
                     </div>
                 </article>
 
-                <!-- INVESTIGATION -->
-
                 <article class="page">
                     <header class="page-header">
-                        <h1>Investigation</h1>
+                        <h1 id="truck">Truck</h1>
                     </header>
                     <div class="page-body">
                         <section class="page-half">
-                            <h2 id="truck">Truck</h2>
                             <p>Lorem ipsum dolor sit amet</p>
                         </section>
                         <section class="page-half">
-                            <h2 id="sanity">Sanity</h2>
                             <p>Lorem ipsum dolor sit amet</p>
                         </section>
                     </div>
                 </article>
 
-                <!-- LOCATIONS -->
+                <!-- INVESTIGATION -->
+
+                <article class="page">
+                    <header class="page-header">
+                        <h1 id="sanity">Sanity</h1>
+                    </header>
+                    <div class="page-body">
+                        <section class="page-half">
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </section>
+                        <section class="page-half">
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </section>
+                    </div>
+                </article>
+
+                <article class="page">
+                    <header class="page-header">
+                        <h1 id="photography">Photography</h1>
+                    </header>
+                    <div class="page-body">
+                        <section class="page-half">
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </section>
+                        <section class="page-half">
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </section>
+                    </div>
+                </article>
+
+                <article class="page">
+                    <header class="page-header">
+                        <h1 id="bones">Bones</h1>
+                    </header>
+                    <div class="page-body">
+                        <section class="page-half">
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </section>
+                        <section class="page-half">
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </section>
+                    </div>
+                </article>
+
+                <article class="page">
+                    <header class="page-header">
+                        <h1 id="cursed-possessions">Cursed Possessions</h1>
+                    </header>
+                    <div class="page-body">
+                        <section class="page-half">
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </section>
+                        <section class="page-half">
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </section>
+                    </div>
+                </article>
 
                 <article class="page">
                     <header class="page-header">
@@ -939,7 +1016,7 @@
 
                 <article class="page">
                     <header class="page-header">
-                        <h1 id="unofficial-challenges">Unofficial Challenges</h1>
+                        <h1 id="inofficial-challenges">Inofficial Challenges</h1>
                     </header>
                     <div class="page-body">
                         <section class="page-half">
