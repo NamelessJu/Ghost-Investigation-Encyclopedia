@@ -1,6 +1,4 @@
-
-
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("beforeinstallprompt", (e) => {
         e.preventDefault();
@@ -144,8 +142,8 @@ window.addEventListener("load", () => {
 });
 
     
-if (window.location.protocol.startsWith("http") && "serviceWorker" in navigator) {
-    navigator.serviceWorker.register("cache.js", {scope: "."}).then(
+if (window.location.protocol.startsWith("http") && "serviceworker" in navigator) {
+    navigator.serviceWorker.register("serviceWorker.js").then(
         function (result) {
             console.log ("Service Worker registered - scope: " + result.scope);
         },
