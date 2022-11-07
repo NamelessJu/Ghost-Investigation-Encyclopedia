@@ -143,11 +143,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 if (window.location.protocol.startsWith("http") && "serviceWorker" in navigator) {
-    navigator.serviceWorker.register("serviceworker.js", {scope: "./"}).then(
-        function (result) {
-            console.log ("Service Worker registered - scope: " + result.scope);
+    navigator.serviceWorker.register("serviceworker.js").then(
+        result => {
+            console.log ("Service Worker registered with scope: " + result.scope);
         },
-        function (error) {
+        error => {
             console.log ("Service Worker registration failed: " + error);
         }
     );

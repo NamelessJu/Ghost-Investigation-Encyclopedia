@@ -1,7 +1,6 @@
 const cacheName = "gie_cache_v11";
 const cachedFiles = [
   "manifest.json",
-  "assets/",
   "favicon.ico",
   "icon.png",
   "icon-maskable.png",
@@ -20,11 +19,13 @@ self.addEventListener("install",
 );
 
 // Delete old caches
-self.addEventListener("activate", (e) => {
-  e.waitUntil(caches.keys().then((keyList) => {
-    return Promise.all(keyList.map((key) => {
-      if (key === cacheName) return;
-      return caches.delete(key);
-    }));
-  }));
-});
+self.addEventListener("activate", 
+  e => e.waitUntil(
+    caches.keys().then(keyList => {
+      return Promise.all(keyList.map(key => {
+        if (key === cacheName) return;
+        return caches.delete(key);
+      }));
+    })
+  )
+);
