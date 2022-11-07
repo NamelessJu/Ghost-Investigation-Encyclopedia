@@ -1,4 +1,4 @@
-const cacheName = "gie_cache_v11";
+const cacheName = "gie_cache_v12";
 const cachedFiles = [
   "manifest.json",
   "favicon.ico",
