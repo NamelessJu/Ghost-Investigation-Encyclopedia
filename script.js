@@ -56,18 +56,6 @@ window.addEventListener("load", () => {
     openPage(0, false);
     openHashPage();
 
-    
-    if (window.location.protocol.startsWith("http") && "serviceWorker" in navigator) {
-        navigator.serviceWorker.register("cache.js").then(
-            function (result) {
-                console.log ("Service Worker registered - scope: " + result.scope);
-            },
-            function (error) {
-                console.log ("Service Worker registration failed: " + error);
-            }
-        );
-    }
-
 
 
     function openPage(index, pushState = true) {
@@ -154,3 +142,15 @@ window.addEventListener("load", () => {
         return document.getElementsByClassName(classes);
     }
 });
+
+    
+if (window.location.protocol.startsWith("http") && "serviceWorker" in navigator) {
+    navigator.serviceWorker.register("cache.js", {scope: "."}).then(
+        function (result) {
+            console.log ("Service Worker registered - scope: " + result.scope);
+        },
+        function (error) {
+            console.log ("Service Worker registration failed: " + error);
+        }
+    );
+}

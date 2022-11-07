@@ -1,8 +1,9 @@
 const cacheName = "gie_cache_v8";
 const cachedFiles = [
-  "manifest.webmanifest",
+  "manifest.json",
   "assets/",
   "favicon.ico",
+  "icon.png",
   "index.html",
   "style.css",
   "script.js"
