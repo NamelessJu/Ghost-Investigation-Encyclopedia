@@ -1,4 +1,4 @@
-const cacheName = "gie_cache_v12";
+const cacheName = "gie_cache_v13";
 const cachedFiles = [
   "manifest.json",
   "favicon.ico",
@@ -30,17 +30,15 @@ self.addEventListener("activate",
   )
 );
 
-// Load page
-self.addEventListener("fetch", event => {
-  event.respondWith(async function() {
-    try {
-      let response = await fetch(event.request);
-      let cache = await caches.open("cache");
-      cache.put(event.request.url, response.clone());
-      return response;
-    }
-    catch(error) {
-      return caches.match(event.request);
-    }
-  }());
+// Load page ("cache first")
+self.addEventListener("fetch", e => {
+  e.respondWith((async () => {
+    const cacheResult = await caches.match(e.request);
+    if (cacheResult) return cacheResult;
+
+    const response = await fetch(e.request);
+    const cache = await caches.open(cacheName);
+    cache.put(e.request, response.clone());
+    return response;
+  })());
 });
