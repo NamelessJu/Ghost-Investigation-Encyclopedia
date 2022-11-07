@@ -29,3 +29,18 @@ self.addEventListener("activate",
     })
   )
 );
+
+// Load page
+self.addEventListener("fetch", event => {
+  event.respondWith(async function() {
+    try {
+      let response = await fetch(event.request);
+      let cache = await caches.open("cache");
+      cache.put(event.request.url, response.clone());
+      return response;
+    }
+    catch(error) {
+      return caches.match(event.request);
+    }
+  }());
+});
