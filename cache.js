@@ -1,4 +1,4 @@
-const cacheName = "gie_cache_v7";
+const cacheName = "gie_cache_v8";
 const cachedFiles = [
   "manifest.webmanifest",
   "assets/",
@@ -10,10 +10,10 @@ const cachedFiles = [
 
 // Cache files
 self.addEventListener("install", (e) => {
-    e.waitUntil((async () => {
-      const cache = await caches.open(cacheName);
-      await cache.addAll(cachedFiles);
-    })());
+  e.waitUntil((async () => {
+    const cache = await caches.open(cacheName);
+    await cache.addAll(cachedFiles);
+  })());
 });
 
 // Delete old caches

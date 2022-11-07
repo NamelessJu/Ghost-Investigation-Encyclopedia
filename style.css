@@ -110,7 +110,7 @@ img {
     padding-bottom: 20%;
     object-fit: cover;
     object-position: center;
-    width: 10rem;
+    width: 8rem;
     max-width: 100%;
     filter: sepia(10%);
     aspect-ratio: 22/25;
