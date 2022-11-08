@@ -41,7 +41,7 @@ window.addEventListener("DOMContentLoaded", () => {
         clearTimeout(copyLinkSuccessTimeout);
         copyLinkSuccessTimeout = setTimeout(() => {
             bookmarkCopylink.classList.remove("success-icon");
-        }, 1000);
+        }, 2000);
     });
 
 

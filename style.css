@@ -3,8 +3,10 @@
     --divider-border: 0.125rem solid currentColor;
     --book-padding: max(1rem, 20px);
 
-    --black: rgb(20, 20, 35);
-    --white: rgb(250, 250, 240);
+    --theme-color: #b7ffd1;
+
+    --text-color: rgb(25, 25, 35);
+    --paper-color: rgb(250, 250, 240);
 }
 
 * {
@@ -25,7 +27,7 @@ html {
 
 body {
     background: white;
-    color:var(--black);
+    color:var(--text-color);
     overflow: hidden;
 }
 
@@ -77,15 +79,15 @@ p {
 
 a {
     display: inline-block;
-    color: rgb(85, 75, 75);
+    color: rgb(75, 67, 117);
+    /* color: var(--theme-color); */
     text-decoration: none;
-    transition: transform 0.5s ease, color 0.4s ease;
+    transition: transform 0.5s ease, color 0.4s ease, text-shadow 0.5s ease;
     cursor: pointer;
 }
 a:hover, a:focus {
     position: relative;
     color: inherit;
-    text-decoration-color: transparent;
     transform: rotate(3deg) translateY(-0.03rem);
     z-index: 99;
 }
@@ -97,12 +99,12 @@ button {
     border: none;
     border-radius: 0.15rem;
     padding: 0.25em 0.7em;
-    background: var(--white);
+    background: var(--paper-color);
     cursor: pointer;
 }
 button:disabled {
     opacity: 0.5;
-    cursor: not-allowed;
+    cursor: default;
 }
 
 img {
@@ -116,7 +118,7 @@ img {
     filter: sepia(10%);
     aspect-ratio: 22/25;
     border-radius: 0.75%;
-    background: var(--white);
+    background: var(--paper-color);
     box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.15);
 }
 img::after {
@@ -233,12 +235,12 @@ img::after {
 }
 
 .bookmark {
-    /* background: #dd1e1e; */
     background-image: url("assets/images/bookmark.svg");
     background-size: 100% auto;
     background-position: bottom center;
     margin: 0;
     color: #f0f0fa;
+    text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.15);
     width: 1.7rem;
     padding: 0.65rem 0 0.85rem 0;
     text-align: center;
@@ -303,11 +305,20 @@ img::after {
     mask-image: var(--mask-gradient);
 }
 
-#error-page-message {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.page-body.page-body-full {
+    display: block;
+}
+
+.page-body.page-body-centered {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+}
+.page-body.page-body-centered > * {
+    width: auto;
+    height: auto;
 }
 
 
