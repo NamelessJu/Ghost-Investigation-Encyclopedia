@@ -11,7 +11,7 @@
 
 * {
     box-sizing: border-box;
-    line-height: 1;
+    line-height: 0.95;
 }
 
 @font-face {
@@ -58,7 +58,7 @@ ul, ol {
 }
 
 li {
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.25rem;
     list-style: none;
     background: url("assets/images/bullet.png");
     background-repeat: no-repeat;
@@ -69,7 +69,7 @@ li {
 }
 
 ul p, ol p {
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.25rem;
 }
 
 p {
@@ -80,14 +80,15 @@ p {
 a {
     display: inline-block;
     color: rgb(75, 67, 117);
-    /* color: var(--theme-color); */
+    color: var(--theme-color);
+    text-shadow: 0.075rem 0.1rem 0rem var(--text-color), 0rem 0rem 0.1rem var(--text-color), 0rem 0.025rem 0.05rem var(--text-color);
     text-decoration: none;
     transition: transform 0.5s ease, color 0.4s ease, text-shadow 0.5s ease;
     cursor: pointer;
 }
 a:hover, a:focus {
     position: relative;
-    color: inherit;
+    color: white;
     transform: rotate(3deg) translateY(-0.03rem);
     z-index: 99;
 }
@@ -192,6 +193,17 @@ img::after {
     justify-items: center;
 }
 
+@keyframes success-icon {
+    0%, 100% {
+        transform: scale(0);
+    }
+    15%, 90% {
+        transform: scale(1);
+    }
+}
+.success-icon i {
+    animation: success-icon 2s ease;
+}
 .success-icon i::before {
     content: "\f00c";
 }
@@ -239,10 +251,12 @@ img::after {
     background-size: 100% auto;
     background-position: bottom center;
     margin: 0;
+    font-size: 0.9rem;
+    line-height: 1;
     color: #f0f0fa;
     text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.15);
     width: 1.7rem;
-    padding: 0.65rem 0 0.85rem 0;
+    padding: 0.7rem 0 0.85rem 0;
     text-align: center;
     border-radius: 0;
     transform: translate(0, -0.25rem);
