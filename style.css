@@ -190,6 +190,10 @@ img::after {
     justify-items: center;
 }
 
+.success-icon i::before {
+    content: "\f00c";
+}
+
 
 #book {
     display: grid;
@@ -217,19 +221,20 @@ img::after {
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
+    gap: 0.75rem;
 }
 
 #bookmarks-left, #bookmarks-right {
     display: flex;
+    gap: 0.75rem;
 }
 #bookmarks-right {
     margin-left: auto;
-    padding-left: 0.75rem;
 }
 
 .bookmark {
-    background: #dd1e1e;
-    background: url("assets/images/bookmark.svg");
+    /* background: #dd1e1e; */
+    background-image: url("assets/images/bookmark.svg");
     background-size: 100% auto;
     background-position: bottom center;
     margin: 0;
@@ -241,12 +246,16 @@ img::after {
     transform: translate(0, -0.25rem);
     margin-bottom: -0.25rem;
 }
-.bookmark + .bookmark {
-    margin-left: 0.75rem;
-}
 .bookmark:hover, .bookmark:focus {
     color: #f0f0fa;
     transform: translate(0, 0);
+}
+
+.bookmark-special {
+    background-image: url("assets/images/bookmark-special.svg");
+}
+.bookmark-technical {
+    background-image: url("assets/images/bookmark-technical.svg");
 }
 
 

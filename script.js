@@ -33,8 +33,15 @@ window.addEventListener("DOMContentLoaded", () => {
     bookmarkInstall.style.display = "none";
 
 
+    let copyLinkSuccessTimeout = null;
     bookmarkCopylink.addEventListener("click", () => {
         navigator.clipboard.writeText(window.location.href);
+        bookmarkCopylink.classList.add("success-icon");
+
+        clearTimeout(copyLinkSuccessTimeout);
+        copyLinkSuccessTimeout = setTimeout(() => {
+            bookmarkCopylink.classList.remove("success-icon");
+        }, 1000);
     });
 
 
