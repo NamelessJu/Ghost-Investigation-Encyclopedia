@@ -11,7 +11,6 @@
 
 * {
     box-sizing: border-box;
-    line-height: 0.95;
 }
 
 @font-face {
@@ -23,6 +22,10 @@ html {
     font-family: "Lazy Dog", Arial, Helvetica, sans-serif;
     font-size: min(5vh, max(1.8vw, 28px));
     font-display: swap;
+}
+
+::selection {
+    background-color: rgba(255, 220, 25, 0.5);
 }
 
 body {
@@ -79,16 +82,14 @@ p {
 
 a {
     display: inline-block;
-    color: rgb(75, 67, 117);
     color: var(--theme-color);
-    text-shadow: 0.075rem 0.1rem 0rem var(--text-color), 0rem 0rem 0.1rem var(--text-color), 0rem 0.025rem 0.05rem var(--text-color);
+    text-shadow: 0.075rem 0.1rem 0rem #2d3333, 0rem 0rem 0.1rem #2d3333, 0rem 0.025rem 0.05rem #2d3333;
     text-decoration: none;
     transition: transform 0.5s ease, color 0.4s ease, text-shadow 0.5s ease;
     cursor: pointer;
 }
 a:hover, a:focus {
     position: relative;
-    color: white;
     transform: rotate(3deg) translateY(-0.03rem);
     z-index: 99;
 }

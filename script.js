@@ -3,12 +3,21 @@ window.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("beforeinstallprompt", (e) => {
         e.preventDefault();
         
-        const promptEvent = e;
+        let promptEvent = e;
 
         bookmarkInstall.style.display = "";
         
-        bookmarkInstall.addEventListener("click", (e) => {
-            promptEvent.prompt();
+        bookmarkInstall.addEventListener("click", () => {
+            if (promptEvent != null) {
+                promptEvent.prompt();
+
+                promptEvent.userChoice.then(result => {
+                    if (result.outcome == "accepted") {
+                        promptEvent = null;
+                        bookmarkInstall.style.display = "none";
+                    }
+                });
+            }
         });
     });
 
@@ -34,16 +43,12 @@ window.addEventListener("DOMContentLoaded", () => {
 
     bookmarkInstall.style.display = "none";
 
-
-    let copyLinkSuccessTimeout = null;
+    bookmarkCopylink.addEventListener("animationend", () => {
+        bookmarkCopylink.classList.remove("success-icon");
+    })
     bookmarkCopylink.addEventListener("click", () => {
         navigator.clipboard.writeText(window.location.href);
         bookmarkCopylink.classList.add("success-icon");
-
-        clearTimeout(copyLinkSuccessTimeout);
-        copyLinkSuccessTimeout = setTimeout(() => {
-            bookmarkCopylink.classList.remove("success-icon");
-        }, 2000);
     });
 
 
@@ -254,8 +259,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
 if (window.location.protocol.startsWith("http") && "serviceWorker" in navigator) {
     navigator.serviceWorker.register("serviceworker.js", {scope: "."}).then(null,
-        error => {
-            console.error("Service Worker registration failed: " + error);
-        }
+        error => console.error("Service Worker registration failed: " + error)
     );
 }
