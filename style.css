@@ -5,7 +5,7 @@
 
     --theme-color: #b7ffd1;
 
-    --text-color: rgb(25, 25, 35);
+    --text-color: rgb(30, 30, 40);
     --paper-color: rgb(250, 250, 240);
 }
 
@@ -25,7 +25,7 @@ html {
 }
 
 ::selection {
-    background-color: rgba(255, 220, 25, 0.5);
+    background-color: rgba(250, 225, 20, 0.5);
 }
 
 body {
@@ -165,8 +165,8 @@ img::after {
     bottom: 9%;
     left: 50%;
     transform: translate(-50%, 50%);
-    font-size: 0.75rem;
-    line-height: 0.9;
+    font-size: 0.7rem;
+    line-height: 0.8;
     width: calc(100% - 1rem);
     text-align: center;
 }
@@ -207,6 +207,14 @@ img::after {
 }
 .success-icon i::before {
     content: "\f00c";
+}
+
+.centered {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 

@@ -24,7 +24,7 @@
         <link rel="stylesheet" href="assets/fonts/fontawesome/css/fontawesome.min.css">
         <link rel="stylesheet" href="assets/fonts/fontawesome/css/solid.min.css">
 
-        <link rel="stylesheet" href="style.css?v=13">
+        <link rel="stylesheet" href="style.css?v=14">
         <script src="script.js?v=12"></script>
         
         <link rel="manifest" href="manifest.json?v=5">
@@ -55,8 +55,11 @@
                     </header>
                     <div class="page-body page-body-centered">
                         <div>
-                            <h2>Page not found.</h2>
-                            <p>This page has either been deleted or never existed in the first place.</p>
+                            <h2><i class="fa fa-ghost"></i> Page not found.</h2>
+                            <p>
+                                This page has either been deleted or never existed in the first place.<br>
+                                <i>Or a ghost ate it...</i>
+                            </p>
                             <p><a href="#contents">Contents list</a></p>
                         </div>
                     </div>
@@ -71,14 +74,14 @@
                     <div class="page-body">
                         <section class="page-half">
                             <h2>About</h2>
+                            <p><b>WORK IN PROGRESS</b></p>
                             <p>Ghost&nbsp;Investigation&nbsp;Encyclopedia is a book containing everything you need to know about investigating ghosts.</p>
                             <p>It is an in-depth version of the "Ghost Huntin' - A Survivors Guide" journal commonly used by paranormal investigators.</p>
                         </section>
                         <section class="page-half">
                             <h2>Version</h2>
                             <p>When new updates for Phasmophobia get released, parts of this encyclopedia may become outdated.</p>
-                            <p><i>This encyclopedia is currently up-to-date with game version <b><a href="#update">0.7.2.0</a></b></i></p>
-                            <p></p>
+                            <p><i>This encyclopedia is currently up-to-date with game version <b><a href="#update">0.7.3.0</a></b></i></p>
 
                             <h2>Credits</h2>
                             <ul class="nomarkers">
@@ -155,10 +158,11 @@
                         <section class="page-half">
                             <p>
                                 Ghosts are entities formed from violent or sudden deaths, and can haunt locations for up to 1000 years.<br>
-                                They are most commonly summoned to the realm of the living by the use of cursed objects.
+                                They get summoned to the realm of the living by careless use of cursed objects.
                             </p>
-                            <p>Ghosts cool down the area around them.</p>
-                            <p>...</p>
+                            <p>All ghosts cool down the area around them, allowing to roughly locate them using a <a href="#thermometer">thermometer</a>. This requires the location's power source to be turned on for rooms to heat up.</p>
+                            <p>Most ghost types have unique abilites, which they can use at random or in specific circumstances, depending on the individual ability.</p>
+                            <p></p>
                         </section>
                         <section class="page-half">
                             <h2>Favourite Room</h2>
@@ -167,10 +171,13 @@
                                 When investigating ghosts it is key to locate the ghost's favourite room for evidence collection.
                             </p>
                             <p>
-                                On larger locations one should narrow down the search area using a <a href="#parabolic-microphone">parabolic microphone</a>.<br>
-                                In smaller areas you can walk around with an <a href="#emf-reader">EMF reader</a> and listen for interactions - as soon as you hear something, search the object by scanning for EMF in the direction you heard the sound from.<br>
-                                The ghost's favourite room should be very close to where the interaction occured. You can also <a href="#thermometer">measure the temperature</a> of rooms while the heating is on to detect low temperatures, which indicate the favourite room aswell.
+                                On larger locations one should first narrow down the search area using a <a href="#parabolic-microphone">parabolic microphone</a>.
                             </p>
+                            <p>
+                                In smaller areas you can walk around with an <a href="#emf-reader">EMF reader</a> and listen for interactions - as soon as you hear something, search the object by scanning for EMF in the direction you heard the sound from.<br>
+                                The ghost's favourite room should be very close to where the interaction occured.
+                            </p>
+                            <p>As mentioned on the previous page, it is also possible to detect the room by measuring temperatures.</p>
                         </section>
                     </div>
                 </article>
@@ -181,13 +188,16 @@
                     </header>
                     <div class="page-body">
                         <section class="page-half">
-                            <p>Ghosts start attacking people who are scared. The threshold for most ghost types lies at an average <a href="#sanity">sanity</a> of 50%.</p>
-                            <p>Hunts can be recognized by the front door locking and electrical devices around the ghost's manifestation malfunctioning.</p>
-                            <p>It takes ghosts a short moment to build up enough power for a deadly manifestation, giving investigators a few seconds to get away at the start of a hunt.</p>
-                            <p>Once the ghost calms down, it will be sent back to it's room and all lights in the location will be turned off. One can check if the ghost is still hunting by trying to flip a light switch - if it's blocked, there's an ongoing hunt.</p>
+                            <p>Ghosts start attacking people who are scared. The threshold for most ghost types lays at an average <a href="#sanity">sanity</a> of 50%.</p>
+                            <p>When a hunt starts, the front door locks and electrical devices around the ghost start malfunctioning.</p>
+                            <p>
+                                It takes ghosts a moment to build up enough power for deadly manifestations, giving investigators a few seconds to get away.<br>
+                                After that, they accelerate when they have a target in sight.
+                            </p>
+                            <p>Once the ghost calms down, it gets sent back to it's room and all lights in the location are turned off, after the switches are blocked during the hunt.</p>
 
                             <h2 id="cursed-hunts">Cursed Hunts</h2>
-                            <p>Whenever <a href="#cursed-possessions">cursed possessions</a> cause a hunt they simultaneously curse them, making that and any future hunts last longer.</p>
+                            <p>Whenever <a href="#cursed-possessions">cursed possessions</a> cause a hunt they simultaneously curse them, making that and any future hunt last longer.</p>
                         </section>
                         <section class="page-half">
                             <h2>Survival</h2>
@@ -281,17 +291,23 @@
                             </ul>
                             
                             <h2>Behaviour</h2>
-                            <p>...</p>
+                            <p>
+                                Spirits are basic ghosts with nearly no unique behaviour or other traits.<br>
+                                The one thing that differentiates them from other types is their weakness against smudging: Spirits are weakened for the double duration of 180 seconds when smudged outside of a hunt.
+                            </p>
                         </section>
                         <section class="page-half">
                             <h2>Ability</h2>
                             <p>None</p>
                             
-                            <h2>Hunt threshold</h2>
+                            <h2>Hunting threshold</h2>
                             <p>50% average sanity</p>
                             
                             <h2>Speed</h2>
-                            <p>1.7 m/s</p>
+                            <p>
+                                Base: 1.7 m/s<br>
+                                Maximum: 2.805 m/s
+                            </p>
                         </section>
                     </div>
                 </article>
@@ -304,12 +320,26 @@
                         <section class="page-half">
                             <h2>Evidence</h2>
                             <ul class="nomarkers">
-                                <li><i class="fa fa-bolt"></i> EMF Level 5</li>
-                                <li><i class="fa fa-walkie-talkie"></i> Spirit Box Response</li>
-                                <li><i class="fa fa-person-running"></i> D.O.T.S Silhouette</li>
+                                <li><a href="#emf-5"><i class="fa fa-bolt"></i> EMF Level 5</a></li>
+                                <li><a href="#spirit-box-response"><i class="fa fa-walkie-talkie"></i> Spirit Box Response</a></li>
+                                <li><a href="#dots-silhouette"><i class="fa fa-person-running"></i> D.O.T.S Silhouette</a></li>
                             </ul>
+                            
+                            <h2>Behaviour</h2>
+                            <p>Wraiths are flying ghosts which barely ever touch the ground. This means that they will not leave footprints on the floor after stepping in <a href="#salt">salt</a>. They have a toxic reaction to it however, making them more active for a short while after contact with it.</p>
                         </section>
                         <section class="page-half">
+                            <h2>Ability</h2>
+                            <p>Teleporting to people <i>(when they're not hunting)</i></p>
+                            
+                            <h2>Hunting threshold</h2>
+                            <p>50% average sanity</p>
+                            
+                            <h2>Speed</h2>
+                            <p>
+                                Base: 1.7 m/s<br>
+                                Maximum: 2.805 m/s
+                            </p>
                         </section>
                     </div>
                 </article>
@@ -322,12 +352,30 @@
                         <section class="page-half">
                             <h2>Evidence</h2>
                             <ul class="nomarkers">
-                                <li><i class="fa fa-walkie-talkie"></i> Spirit Box Response</li>
-                                <li><i class="fa fa-fingerprint"></i> Fingerprints</li>
-                                <li><i class="fa fa-person-running"></i> D.O.T.S Silhouette</li>
+                                <li><a href="#spirit-box-response"><i class="fa fa-walkie-talkie"></i> Spirit Box Response</a></li>
+                                <li><a href="#fingerprints"><i class="fa fa-fingerprint"></i> Fingerprints</a></li>
+                                <li><a href="#dots-silhouette"><i class="fa fa-person-running"></i> D.O.T.S Silhouette</a></li>
                             </ul>
+                            
+                            <h2>Behaviour</h2>
+                            <p>
+                                Phantoms don't like being seen. They will be visible for considerably shorter periods while they hunt.<br>
+                                When Phantoms are seen, they induce fear into those looking at them.
+                            </p>
+                            <p>Following people around is something a Phantom often tends to do.</p>
                         </section>
                         <section class="page-half">
+                            <h2>Ability</h2>
+                            <p>Disappearing right before taking a photo of them <i>(unless hunting)</i></p>
+                            
+                            <h2>Hunting threshold</h2>
+                            <p>50% average sanity</p>
+                            
+                            <h2>Speed</h2>
+                            <p>
+                                Base: 1.7 m/s<br>
+                                Maximum: 2.805 m/s
+                            </p>
                         </section>
                     </div>
                 </article>
@@ -606,9 +654,11 @@
                             </ul>
                         </section>
                         <section class="page-half">
-                            <div class="image-wrapper">
-                                <img src="assets/images/ghost_types/obake/unique_handprint.jpg">
-                                <span class="image-description">Unique Obake handprint with six fingers</span>
+                            <div class="centered">
+                                <div class="image-wrapper">
+                                    <img src="assets/images/ghost_types/obake/unique_handprint.jpg">
+                                    <span class="image-description">Unique Obake handprint with six fingers</span>
+                                </div>
                             </div>
                         </section>
                     </div>
@@ -719,9 +769,11 @@
                             <p>These are detectable either by checking with a <a href="#thermometer">thermometer</a> or by watching your breath: in freezing temperatures your breath will become visible.</p>
                         </section>
                         <section class="page-half">
-                            <div class="image-wrapper">
-                                <img src="assets/images/placeholder.png">
-                                <span class="image-description">Freezing breath</span>
+                            <div class="centered">
+                                <div class="image-wrapper">
+                                    <img src="assets/images/placeholder.png">
+                                    <span class="image-description">Freezing breath</span>
+                                </div>
                             </div>
                         </section>
                     </div>
@@ -738,13 +790,15 @@
                             <p>Ghosts will produce fields of strength 5 with about every other interaction on average - provided they're able to.</p>
                         </section>
                         <section class="page-half">
-                            <div class="image-wrapper">
-                                <img src="assets/images/placeholder.png">
-                                <span class="image-description">EMF Reader detecting an EMF of level 5</span>
-                            </div>
-                            <div class="image-wrapper">
-                                <img src="assets/images/placeholder.png">
-                                <span class="image-description">Activity spike of 5</span>
+                            <div class="centered">
+                                <div class="image-wrapper">
+                                    <img src="assets/images/placeholder.png">
+                                    <span class="image-description">EMF Reader detecting an EMF of level 5</span>
+                                </div>
+                                <div class="image-wrapper">
+                                    <img src="assets/images/placeholder.png">
+                                    <span class="image-description">Activity spike of 5</span>
+                                </div>
                             </div>
                         </section>
                     </div>
@@ -761,9 +815,11 @@
                             <p>If the ghost responds, the ghost symbol on the spirit box will light up to indicate that a response is being received.</p>
                         </section>
                         <section class="page-half">
-                            <div class="image-wrapper">
-                                <img src="assets/images/placeholder.png">
-                                <span class="image-description">Spirit box playing a ghost's response</span>
+                            <div class="centered">
+                                <div class="image-wrapper">
+                                    <img src="assets/images/placeholder.png">
+                                    <span class="image-description">Spirit box playing a ghost's response</span>
+                                </div>
                             </div>
                         </section>
                     </div>
@@ -787,13 +843,15 @@
                             </ul>
                         </section>
                         <section class="page-half">
-                            <div class="image-wrapper">
-                                <img src="assets/images/evidence/fingerprints/handprint_window.jpg">
-                                <span class="image-description">Handprint on a window</span>
-                            </div>
-                            <div class="image-wrapper">
-                                <img src="assets/images/placeholder.png">
-                                <span class="image-description">Fingerprint on a light switch</span>
+                            <div class="centered">
+                                <div class="image-wrapper">
+                                    <img src="assets/images/evidence/fingerprints/handprint_window.jpg">
+                                    <span class="image-description">Handprint on a window</span>
+                                </div>
+                                <div class="image-wrapper">
+                                    <img src="assets/images/placeholder.png">
+                                    <span class="image-description">Fingerprint on a light switch</span>
+                                </div>
                             </div>
                         </section>
                     </div>
@@ -813,17 +871,19 @@
                             </p>
                         </section>
                         <section class="page-half">
-                            <div class="image-wrapper">
-                                <img src="assets/images/evidence/ghost_writing/writing.jpg">
-                                <span class="image-description">Book with writing</span>
-                            </div>
-                            <div class="image-wrapper">
-                                <img src="assets/images/evidence/ghost_writing/scribbling.jpg">
-                                <span class="image-description">Book with scribbling</span>
-                            </div>
-                            <div class="image-wrapper">
-                                <img src="assets/images/placeholder.png">
-                                <span class="image-description">Book with drawing</span>
+                            <div class="centered">
+                                <div class="image-wrapper">
+                                    <img src="assets/images/evidence/ghost_writing/writing.jpg">
+                                    <span class="image-description">Book with writing</span>
+                                </div>
+                                <div class="image-wrapper">
+                                    <img src="assets/images/placeholder.png">
+                                    <span class="image-description">Book with drawing</span>
+                                </div>
+                                <div class="image-wrapper">
+                                    <img src="assets/images/evidence/ghost_writing/scribbling.jpg">
+                                    <span class="image-description">Book with scribbling</span>
+                                </div>
                             </div>
                         </section>
                     </div>
@@ -843,9 +903,11 @@
                             <p><i>There have been reports of ghost orb sightings without the use of night vision, however this only seems to be possible in very specific lighting conditions, meaning that these are very rare occurances.</i></p>
                         </section>
                         <section class="page-half">
-                            <div class="image-wrapper">
-                                <img src="assets/images/placeholder.png">
-                                <span class="image-description">A ghost orb seen through a night vision camera</span>
+                            <div class="centered">
+                                <div class="image-wrapper">
+                                    <img src="assets/images/placeholder.png">
+                                    <span class="image-description">A ghost orb seen through a night vision camera</span>
+                                </div>
                             </div>
                         </section>
                     </div>
@@ -862,13 +924,15 @@
                             <p>It is possible to see these silhouettes with the naked eye, but it is easier to spot them through night vision.</p>
                         </section>
                         <section class="page-half">
-                            <div class="image-wrapper">
-                                <img src="assets/images/placeholder.png">
-                                <span class="image-description">A ghost silhoutte viewed through night vision</span>
-                            </div>
-                            <div class="image-wrapper">
-                                <img src="assets/images/placeholder.png">
-                                <span class="image-description">Another silhoutte seen in person</span>
+                            <div class="centered">
+                                <div class="image-wrapper">
+                                    <img src="assets/images/placeholder.png">
+                                    <span class="image-description">A ghost silhoutte viewed through night vision</span>
+                                </div>
+                                <div class="image-wrapper">
+                                    <img src="assets/images/placeholder.png">
+                                    <span class="image-description">Another silhoutte seen in person</span>
+                                </div>
                             </div>
                         </section>
                     </div>
@@ -1066,15 +1130,24 @@
 
                 <!-- UPDATE -->
                 
-                <article id="page-update" class="page" data-updateversion="0.7.2.0" data-updatedate="2022-11-08">
+                <article id="page-update" class="page" data-updateversion="0.7.3.0">
                     <header class="page-header">
-                        <h1 id="update">Phasmophobia Update v0.7.2.0</h1>
+                        <h1 id="update">Phasmophobia Update v0.7.3.0</h1>
                     </header>
                     <div class="page-body page-body-full">
+                        <p>Ghost Huntin' Distribution fixed a bunch of issues that have been affecting investigators, meanwhile they're hard at work on bigger changes.</p>
+                        <p>
+                            <a href="https://store.steampowered.com/news/app/739630/view/3387297759145809768" target="_blank">Detailed list of changes</a><br>
+                            <a href="https://store.steampowered.com/news/app/739630" target="_blank">All updates</a>
+                        </p>
+                        
+                        <hr>
+                        <h2>Older Updates</h2>
+
+                        <h3>v0.7.2.0</h3>
                         <p>Halloween decorations have been removed and the Halloween '22 event has ended.</p>
                         <p>Ghost Huntin' Distribution added catalan to the list of available languages.</p>
-                        <p><a href="https://store.steampowered.com/news/app/739630/view/3435710744921094844" target="_blank">Full list of changes</a></p>
-                        <p><a href="https://store.steampowered.com/news/app/739630" target="_blank">All updates</a></p>
+                        <p><a href="https://store.steampowered.com/news/app/739630/view/3435710744921094844" target="_blank">Detailed list of changes</a></p>
                     </div>
                 </article>
 
