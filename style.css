@@ -1,12 +1,12 @@
 
 :root {
-    --divider-border: 0.125rem solid currentColor;
-    --book-padding: max(1rem, 20px);
-
     --theme-color: #b7ffd1;
 
     --text-color: rgb(30, 30, 40);
     --paper-color: rgb(250, 250, 240);
+
+    --divider-border: 0.125rem solid var(--text-color);
+    --book-padding: max(1rem, 20px);
 }
 
 * {
@@ -92,6 +92,14 @@ a:hover, a:focus {
     position: relative;
     transform: rotate(3deg) translateY(-0.03rem);
     z-index: 99;
+}
+
+hr {
+    border: none;
+    border-bottom: var(--divider-border);
+    border-color: var(--text-color);
+    padding: 0;
+    margin: 1rem 0;
 }
 
 button {
