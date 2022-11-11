@@ -65,6 +65,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 
+    const titleBase = document.title;
+
+
+
     openPage(0, false);
     openHashPage();
 
@@ -110,8 +114,11 @@ window.addEventListener("DOMContentLoaded", () => {
         if (index <= 0) btnPagePrevious.setAttribute("disabled", "disabled");
         if (index >= pages.length - 1 || index == -1) btnPageNext.setAttribute("disabled", "disabled");
 
+        let pageHeading = getOpenedPageHeading();
+        document.title = (index > 0 ? pageHeading.innerText + " - " : "") + titleBase;
+
         if (pushState)
-            window.history.pushState(null, "", "#" + getOpenedPageHash());
+            window.history.pushState(null, "", index > 0 ? "#" + getOpenedPageHash() : window.location.pathname + window.location.search);
     }
 
     function getOpenedPageIndex() {
@@ -142,14 +149,25 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
     function getOpenedPageHash() {
+        let pageHeading = getOpenedPageHeading();
+        
+        if (pageHeading != null)
+            return pageHeading.id;
+        else
+            return (index * 2 + 1);
+    }
+
+    function getOpenedPageHeading() {
         let index = getOpenedPageIndex();
         let page = pages[index];
+        if (page == undefined) return null;
+        
         let mainHeadings = page.getElementsByTagName("h1");
         
         if (mainHeadings.length > 0 && mainHeadings[0].id.length > 0)
-            return mainHeadings[0].id;
-        else
-            return (index * 2 + 1);
+            return mainHeadings[0];
+        
+        return null;
     }
 
 
