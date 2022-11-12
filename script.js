@@ -26,7 +26,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const bookmarkCopylink = id("bookmark-copylink");
     const bookmarkInstall = id("bookmark-install");
 
-    const pages = Array.from(classes("page"));
+    const pages = classes("page");
     const errorPage = id("page-error");
     const updatePage = id("page-update");
     
@@ -39,6 +39,10 @@ window.addEventListener("DOMContentLoaded", () => {
     const pageNumberRight = id("page-number-right");
     const btnPagePrevious = id("btn-page-previous");
     const btnPageNext = id("btn-page-next");
+
+    const tapes = classes("tape");
+    const radio = id("radio");
+    const radioAudio = id("radio-audio");
     
 
     bookmarkInstall.style.display = "none";
@@ -59,6 +63,26 @@ window.addEventListener("DOMContentLoaded", () => {
     btnPageNext.addEventListener("click", () => {
         openPage(getOpenedPageIndex() + 1);
     });
+
+
+    tapes.forEach(tape => {
+        tape.addEventListener("click", e => {
+            radioAudio.src = e.currentTarget.dataset.soundurl;
+            radioAudio.play();
+            radio.classList.add("radio-playing");
+        });
+    });
+
+    radio.addEventListener("click", () => {
+        radioAudio.pause();
+        radio.classList.remove("radio-playing");
+    });
+
+    radioAudio.addEventListener("ended", () => {
+        radio.classList.remove("radio-playing");
+    });
+
+    radioAudio.volume = 0.2;
 
 
     window.addEventListener("hashchange", openHashPage)
@@ -133,9 +157,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
         let hash = window.location.hash.substring(1);
 
-        let hashNumber = Number.parseInt(hash);
-        if (!isNaN(hashNumber)) return Math.floor((hashNumber - 1) / 2);
-
         let currentElement = document.getElementById(hash);
         while (currentElement != undefined && currentElement != document.body) {
             let pageIndex = pages.indexOf(currentElement);
@@ -143,7 +164,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
             if (currentElement.parentElement != null) currentElement = currentElement.parentElement;
             else currentElement = undefined;
-        }
+        } 
+
+        let hashNumber = Number.parseInt(hash);
+        if (!isNaN(hashNumber)) return Math.floor((hashNumber - 1) / 2);
         
         return -1;
     }
@@ -179,7 +203,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     function disableUpdateHighlight() {
         bookmarkUpdate.classList.remove("bookmark-special");
-        Array.from(classes("fa", bookmarkUpdate)).forEach((e) => {
+        classes("fa", bookmarkUpdate).forEach((e) => {
             e.classList.remove("fa-beat");
         });
     }
@@ -192,7 +216,7 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
     function classes(classes, container = null) {
-        return (container != null ? container : document).getElementsByClassName(classes);
+        return Array.from((container != null ? container : document).getElementsByClassName(classes));
     }
     
     function compareVersions(from, to) {

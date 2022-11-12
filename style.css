@@ -385,6 +385,63 @@ img::after {
 }
 
 
+#radio {
+    position: fixed;
+    left: 50%;
+    bottom: calc(var(--book-padding) + 2.5rem + 2vh);
+    transform: translate(-50%, calc(var(--book-padding) + 2.5rem + 2vh + 120%));
+    transition: transform 0.3s cubic-bezier(.25,0,.5,.1);
+    cursor: pointer;
+}
+#radio.radio-playing {
+    transition: transform 0.5s cubic-bezier(.3,.9,.75,1);
+    transform: translate(-50%, 0);
+}
+
+#radio > img {
+    padding: unset;
+    object-fit: unset;
+    object-position: unset;
+    max-width: 40vw;
+    filter: unset;
+    aspect-ratio: unset;
+    border-radius: unset;
+    background: unset;
+    box-shadow: unset;
+    filter: drop-shadow(0 0.25rem 0.3rem rgba(0, 0, 0, 0.3));
+    animation: radio-playing-rotate 1.2s ease-in-out infinite, radio-playing-jump 1.2s ease-in-out infinite;
+}
+@keyframes radio-playing-rotate {
+    0%, 100% {
+        rotate: -3deg;
+    }
+    50% {
+        rotate: 3deg;
+    }
+}
+@keyframes radio-playing-jump {
+    0%, 50%, 100% {
+        translate: 0 0;
+    }
+    25%, 75% {
+        translate: 0 -0.3rem;
+    }
+}
+
+.tape {
+    display: inline-block;
+    padding: 0.15rem 0.25rem;
+    border-radius: 0.2rem;
+    background: rgb(30, 30, 40);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.tape:hover {
+    background:rgba(30, 30, 40, 0.75);
+}
+
+
 
 @media (max-width: 1000px) {
 
