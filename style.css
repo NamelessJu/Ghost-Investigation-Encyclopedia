@@ -60,14 +60,21 @@ ul, ol {
     padding: 0;
 }
 
+ol {
+    margin-left: 1.5rem;
+}
+
 li {
     margin-bottom: 0.25rem;
+}
+
+ul li {
     list-style: none;
     background: url("assets/images/bullet.png");
     background-repeat: no-repeat;
     background-position: 0rem calc(50% - 0.075rem);
     background-size: 0.65rem;
-
+    margin-left: 0;
     padding-left: 1rem;
 }
 
