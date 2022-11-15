@@ -78,6 +78,9 @@ window.addEventListener("DOMContentLoaded", () => {
         radio.classList.remove("radio-playing");
     });
 
+    radioAudio.addEventListener("error", () => {
+        radio.classList.remove("radio-playing");
+    });
     radioAudio.addEventListener("ended", () => {
         radio.classList.remove("radio-playing");
     });

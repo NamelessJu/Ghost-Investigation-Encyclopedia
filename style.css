@@ -164,11 +164,6 @@ img::after {
     margin-left: 1rem;
 }
 
-.two-columns {
-    column-count: 2;
-    column-gap: 0.5rem;
-}
-
 .image-wrapper {
     position: relative;
     display: inline-block;
@@ -202,13 +197,6 @@ img::after {
     margin: 0.45rem;
 }
 
-.image-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 0.5rem;
-    justify-items: center;
-}
-
 @keyframes success-icon {
     0%, 100% {
         transform: scale(0);
@@ -225,10 +213,17 @@ img::after {
 }
 
 .centered {
-    text-align: center;
     display: flex;
     justify-content: center;
     gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.left {
+    display: flex;
+    justify-content: left;
+    gap: 1rem;
+    row-gap: 0.4rem;
     flex-wrap: wrap;
 }
 
@@ -461,8 +456,11 @@ img::after {
     }
 
 
-    .two-columns {
-        columns: 1;
+    .left {
+        flex-direction: column;
+    }
+    .left > * {
+        width: fit-content;
     }
 
 
