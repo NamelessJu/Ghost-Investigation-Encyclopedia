@@ -24,7 +24,7 @@
         <link rel="stylesheet" href="assets/fonts/fontawesome/css/fontawesome.min.css">
         <link rel="stylesheet" href="assets/fonts/fontawesome/css/solid.min.css">
 
-        <link rel="stylesheet" href="style.css?v=18">
+        <link rel="stylesheet" href="style.css?v=19">
         <script src="script.js?v=15"></script>
         
         <link rel="manifest" href="manifest.json?v=6">
@@ -89,7 +89,7 @@
                             <h2>Credits</h2>
                             <ul class="nomarkers">
                                 <li>Phasmophobia by <span class="nolinebreak"><a href="https://kineticgames.co.uk/" target="_blank">Kinetic&nbsp;Games</a> <i class="fa fa-heart"></i></span></li>
-                                <li>Some information taken from the <span class="nolinebreak"><a href="https://discord.com/invite/phasmophobia" target="_blank">Official&nbsp;Phasmophobia&nbsp;Discord</a> <i class="fa fa-heart"></i></span></li>
+                                <li>Some information taken from the <span class="nolinebreak"><a href="https://discord.com/invite/phasmophobia" target="_blank">Official Phasmophobia Discord</a> <i class="fa fa-heart"></i></span></li>
                                 <li>Lazy&nbsp;Dog font by <a href="https://www.dafont.com/paul-neave.d1372" target="_blank">Paul&nbsp;Neave</a></li>
                                 <li>Icons by <a href="https://fontawesome.com/" target="_blank">Font&nbsp;Awesome</a></li>
                             </ul>
@@ -163,9 +163,8 @@
                                 Ghosts are entities formed from violent or sudden deaths, and can haunt locations for up to 1000 years.<br>
                                 They get summoned to the realm of the living by careless use of cursed objects.
                             </p>
-                            <p>All ghosts cool down the area around them, allowing to roughly locate them using a <a href="#thermometer">thermometer</a>. This requires the location's power source to be turned on for rooms to heat up.</p>
-                            <p>Most ghost types have unique abilites, which they can use at random or in specific circumstances, depending on the individual ability. Most abilities can only be used outside of hunts.</p>
-                            <p></p>
+                            <p>Most ghost types have unique abilites, which they can use at random or in specific circumstances, depending on the individual ability.</p>
+                            <p>With the light in the room turned off ghosts become more active.</p>
                         </section>
                         <section class="page-half">
                             <h2>Favourite Room</h2>
@@ -180,7 +179,7 @@
                                 In smaller areas you can walk around with an <a href="#emf-reader">EMF reader</a> and listen for interactions - as soon as you hear something, search the object by scanning for EMF in the direction you heard the sound from.<br>
                                 The ghost's favourite room should be very close to where the interaction occured.
                             </p>
-                            <p>As mentioned on the previous page, it is also possible to detect the room by measuring temperatures.</p>
+                            <p>Ghosts cool down the area around them, allowing to locate them using a <a href="#thermometer">thermometer</a>. This requires the location's power source to be turned on for the other rooms to heat up.</p>
                         </section>
                     </div>
                 </article>
@@ -197,12 +196,12 @@
                                 It takes ghosts a moment to build up enough power for deadly manifestations, giving investigators a few seconds to get away.<br>
                                 After that, they accelerate when they have a target in sight.
                             </p>
-                            <p>Once the ghost calms down, it gets sent back to it's room and all lights in the location are turned off, after the switches are blocked during the hunt.</p>
-
-                            <h2 id="cursed-hunts">Cursed Hunts</h2>
-                            <p>Whenever <a href="#cursed-possessions">cursed possessions</a> cause a hunt they simultaneously curse them, making that and any future hunt last longer.</p>
+                            <p>During a hunt, the ghost ravages everything around it as it throws an object with a chance of 50% every half a second and randomly opens doors. Additionally, all light switches are blocked for the duration of the hunt.</p>
+                            <p>Once the ghost calms down, it gets sent back to it's room and all lights in the location are turned off.</p>
                         </section>
                         <section class="page-half">
+                            <h2 id="cursed-hunts">Cursed Hunts</h2>
+                            <p>Whenever <a href="#cursed-possessions">cursed possessions</a> cause a hunt they simultaneously curse them, making that and any future hunt last 20 seconds longer.</p>
                             <h2>Survival</h2>
                             <p>The first step to be able to survive a hunting ghost is to search and memorize a hiding spot <b>before</b> you get hunted!</p>
                             <p>Ghosts can sense activated electrical equipment around them and will be notified of your location if you are holding one.</p>
@@ -1590,10 +1589,42 @@
                     </header>
                     <div class="page-body">
                         <section class="page-half">
-                            <p>Lorem ipsum dolor sit amet</p>
+                            <p>You can take pictures of any paranormal activity or object you come across to collect additional evidence, which earns you more rewards.</p>
+                            <p>Photos you take will be graded with stars, depending on the distance of the object in question - the closer, the better.</p>
+                            <p>[IMAGES]</p>
                         </section>
                         <section class="page-half">
-                            <p>Lorem ipsum dolor sit amet</p>
+                            <h2>Photo rewards</h2>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Object</th>
+                                        <th><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></th>
+                                        <th><i class="fa fa-star"></i><i class="fa fa-star"></i></th>
+                                        <th><i class="fa fa-star"></i></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Ghost</td>
+                                        <td>$20</td>
+                                        <td>$10</td>
+                                        <td>$5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bone, burned crucifix, dirty water</td>
+                                        <td>$10</td>
+                                        <td>$5</td>
+                                        <td>$2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cursed possession, dead body, D.O.T.S silhouette, fingerprints, footprints, ghost writing, interactions</td>
+                                        <td>$5</td>
+                                        <td>$2</td>
+                                        <td>$1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </section>
                     </div>
                 </article>
@@ -1604,10 +1635,11 @@
                     </header>
                     <div class="page-body">
                         <section class="page-half">
-                            <p>Lorem ipsum dolor sit amet</p>
+                            <p>A ghost always comes with remains of their once living self. You can find a bone in the place where the ghost once died.</p>
+                            <p>Collect (and <a href="#photography">photograph</a>) it for additional income.</p>
                         </section>
                         <section class="page-half">
-                            <p>Lorem ipsum dolor sit amet</p>
+                            <p>[IMAGES]</p>
                         </section>
                     </div>
                 </article>
@@ -1829,24 +1861,6 @@
                         <p>Halloween decorations have been removed and the Halloween '22 event has ended.</p>
                         <p>Ghost Huntin' Distribution added catalan to the list of available languages.</p>
                         <p><a href="https://store.steampowered.com/news/app/739630/view/3435710744921094844" target="_blank">Detailed list of changes</a></p>
-                    </div>
-                </article>
-
-
-                <!-- EASTER EGG -->
-                
-                <article class="page">
-                    <header class="page-header">
-                        <h1 id="666">6̵̧̻͎͙͛́̈͊̈̌̾͒͘͝6̶̻̹̩͈̞͎̜͍͊̅͋͑̔̀͊6̷̢̧̢̨̧͙͎̝̝̮̹͎͋̈͘</h1>
-                    </header>
-                    <div class="page-body page-body-centered">
-                        <div>
-                            <h2><i class="fa fa-ghost"></i> Page <s>not</s> found.</h2>
-                            <p>
-                                <div class="tape" data-soundurl="assets/sounds/Adrift CURSED.mp3"><i class="fa fa-volume-high"></i> t̵͈̻̹̰͒̈́̚f̸̢̈́̈͘î̷͖̯̱ͅr̷̛͍̠̮͐́̑͜d̴͎̞̐̋͊̿Ạ̵̖̥͖͑̓͒͝</div>
-                            </p>
-                            <p><a href="#contents">Contents list</a></p>
-                        </div>
                     </div>
                 </article>
 

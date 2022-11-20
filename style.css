@@ -73,6 +73,7 @@ ul li {
     background: url("assets/images/bullet.png");
     background-repeat: no-repeat;
     background-position: 0rem calc(50% - 0.075rem);
+    background-position: 0rem 0.1rem;
     background-size: 0.65rem;
     margin-left: 0;
     padding-left: 1rem;
@@ -80,6 +81,14 @@ ul li {
 
 ul p, ol p {
     margin-bottom: 0.25rem;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+}
+table th {
+    text-align: left;
 }
 
 p {
